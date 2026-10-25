@@ -1,0 +1,5 @@
+<script setup>
+import { courses as wayfinderCourses1 } from './../actions/App/Http/Controllers/PublicController';
+
+import {Link} from '@inertiajs/vue3';import PublicLayout from '../Layouts/PublicLayout.vue';defineProps({content:Object});</script>
+<template><PublicLayout><main class="public-page"><section class="page-hero wrap"><div class="eyebrow">{{content.eyebrow}}</div><h1>{{content.title}}<br><em>{{content.emphasis}}</em></h1><p>{{content.intro}}</p></section><section class="wrap page-content about-content"><div><h2>{{content.section_title}}</h2><p>{{content.section_body}}</p><p>{{content.section_support}}</p></div><div class="about-values"><span v-for="(value,index) in content.values" :key="value">{{String(index+1).padStart(2,'0')}} · {{value}}</span></div></section><section class="wrap about-cta"><h2>{{content.cta_title}}</h2><Link class="button button-dark" :href="wayfinderCourses1().url">Explore programs <UiIcon name="arrow-up-right" class="ui-icon" :size="13" /></Link></section></main></PublicLayout></template>

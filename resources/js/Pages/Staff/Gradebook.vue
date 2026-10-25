@@ -1,0 +1,30 @@
+<script setup>
+import { Link } from '@inertiajs/vue3';
+import StaffAdminLayout from '../../Layouts/StaffAdminLayout.vue';
+import { gradebook as gradebookRoute, exportGradebook } from '../../actions/App/Http/Controllers/StaffController';
+
+defineProps({ courses: Array, selectedCourse: Object, assignments: Array, learners: Array });
+</script>
+
+<template>
+  <StaffAdminLayout>
+    <div class="admin-heading gradebook-heading"><div><div class="eyebrow">ASSESSMENT RECORDS</div><h1>Gradebook.</h1><p>Review assignment results for your courses. Teacher access is limited to assigned courses.</p></div><a v-if="selectedCourse" class="button button-dark gradebook-export" :href="exportGradebook({ query: { course: selectedCourse.id } }).url"><UiIcon name="file-text" :size="14" /> Export CSV</a></div>
+    <section class="admin-panel gradebook-panel">
+      <div v-if="courses.length" class="gradebook-course-tabs" aria-label="Choose a course">
+        <Link v-for="course in courses" :key="course.id" :href="gradebookRoute({ query: { course: course.id } }).url" :class="{ active: selectedCourse?.id === course.id }">{{ course.title }}</Link>
+      </div>
+      <template v-if="selectedCourse">
+        <div class="gradebook-summary"><div><span class="eyebrow">CURRENT COURSE</span><h2>{{ selectedCourse.title }}</h2></div><span>{{ learners.length }} learners · {{ assignments.length }} assignments</span></div>
+        <div v-if="assignments.length && learners.length" class="gradebook-table-wrap"><table class="gradebook-table"><thead><tr><th>Learner</th><th v-for="assignment in assignments" :key="assignment.id" :title="assignment.dueAt ? 'Due ' + assignment.dueAt : ''">{{ assignment.title }}<small>{{ assignment.maxPoints }} pts</small></th><th>Graded to date</th></tr></thead><tbody><tr v-for="learner in learners" :key="learner.id"><td class="gradebook-learner"><b>{{ learner.name }}</b><small>{{ learner.email }}</small><small v-if="learner.cohort">{{ learner.cohort }}</small></td><td v-for="assignment in assignments" :key="assignment.id"><span class="gradebook-grade" :class="'grade-' + learner.grades[assignment.id].status">{{ learner.grades[assignment.id].status === 'graded' ? learner.grades[assignment.id].score + ' / ' + assignment.maxPoints : learner.grades[assignment.id].status.replace('_', ' ') }}</span></td><td class="gradebook-total"><b>{{ learner.gradedPercent === null ? '—' : learner.gradedPercent + '%' }}</b><small>{{ learner.gradedPoints }} / {{ learner.gradedPossible }} points</small></td></tr></tbody></table></div>
+        <div v-else class="admin-empty">{{ learners.length ? 'Assignments for this course will appear here.' : 'No active learners are enrolled in this course.' }}</div>
+        <p class="gradebook-note">The running percentage uses graded assignments only. Missing and ungraded work is kept distinct so the view doesn’t imply an unreported score.</p>
+      </template>
+      <div v-else class="admin-empty">No courses are assigned to your staff account yet.</div>
+    </section>
+  </StaffAdminLayout>
+</template>
+
+<style scoped>
+.gradebook-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px}.gradebook-heading h1{margin:8px 0;font:500 clamp(2.2rem,5vw,3rem)/1.04 var(--serif);letter-spacing:-.04em}.gradebook-heading p{margin:0;color:#777b72;font-size:12px}.gradebook-export{white-space:nowrap}.gradebook-panel{padding:20px;min-width:0}.gradebook-course-tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:15px;border-bottom:1px solid #e9e7e1}.gradebook-course-tabs a{flex:none;max-width:260px;padding:9px 12px;border:1px solid #e9e7e1;border-radius:5px;color:#73786e;font-size:10px}.gradebook-course-tabs a.active{border-color:#52664f;background:#f4f6f1;color:#52664f;font-weight:700}.gradebook-summary{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;padding:20px 0 14px}.gradebook-summary h2{margin:6px 0 0;font:500 23px var(--serif)}.gradebook-summary>span{color:#85877f;font-size:10px}.gradebook-table-wrap{overflow:auto;max-width:100%;border:1px solid #eeede7;border-radius:6px}.gradebook-table{width:100%;min-width:760px;border-collapse:collapse;text-align:left}.gradebook-table th,.gradebook-table td{padding:12px 13px;border-bottom:1px solid #eeede7;vertical-align:middle}.gradebook-table th{background:#faf9f6;color:#777b72;font-size:9px;font-weight:700}.gradebook-table th small,.gradebook-learner small,.gradebook-total small{display:block;margin-top:5px;color:#8b8e86;font-size:8px;font-weight:400}.gradebook-learner{min-width:175px}.gradebook-learner>b{font-size:10px}.gradebook-grade{display:inline-flex;align-items:center;min-height:25px;padding:4px 7px;border-radius:12px;background:#f2f1ed;color:#77776f;font-size:8px;text-transform:capitalize;white-space:nowrap}.gradebook-grade.grade-graded{background:#eaf2e7;color:#4f7250}.gradebook-grade.grade-submitted{background:#f7efdf;color:#8d6c32}.gradebook-total>b{font:500 16px var(--serif)}.gradebook-total small{white-space:nowrap}.gradebook-note{margin:13px 0 0;color:#85877f;font-size:9px;line-height:1.6}.theme-dark .gradebook-course-tabs{border-color:#383c35}.theme-dark .gradebook-course-tabs a{border-color:#383c35;color:#c0c3ba}.theme-dark .gradebook-course-tabs a.active{background:#43583f;color:#52664f}.theme-dark .gradebook-table-wrap{border-color:#383c35}.theme-dark .gradebook-table th,.theme-dark .gradebook-table td{border-color:#383c35}.theme-dark .gradebook-table th{background:#252923;color:#b9bcb2}.theme-dark .gradebook-learner>b,.theme-dark .gradebook-total>b,.theme-dark .gradebook-summary h2{color:#f0f0ea}
+@media(max-width:640px){.gradebook-heading{align-items:flex-start;flex-direction:column}.gradebook-export{min-height:42px}.gradebook-panel{padding:13px}.gradebook-summary{align-items:flex-start;flex-direction:column}.gradebook-course-tabs a{font-size:9px}}
+</style>

@@ -1,0 +1,85 @@
+:root {
+  --font-sans: "Instrument Sans", Arial, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --sans: var(--font-sans);
+  --display: var(--font-sans);
+  --serif: var(--font-serif);
+  --text-body: 1rem;
+  --text-reading: 1.0625rem;
+  --text-label: 0.8125rem;
+  --text-meta: 0.75rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: 1.55;
+  font-optical-sizing: auto;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-optical-sizing: auto;
+}
+
+/* Replace the tiny 7–10px copy used across the early page styles with a
+   readable floor while keeping existing larger text sizes intact. */
+body :is(p, li, dd, dt, td, th, label, time, small) {
+  font-size: max(var(--text-meta), 0.8em) !important;
+}
+
+body p {
+  font-size: min(1rem, max(0.875rem, 0.9em)) !important;
+  line-height: 1.65;
+}
+
+body :is(button, input, select, textarea) {
+  font-size: max(var(--text-label), 0.82em) !important;
+}
+
+body :is(h1, h2) {
+  font-family: var(--font-serif);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.eyebrow,
+.side-label,
+.course-section-kicker {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+}
+
+.main-nav,
+.top-actions,
+.footer,
+.side-link {
+  font-size: 0.8125rem;
+}
+
+.button {
+  font-size: 0.875rem;
+  letter-spacing: 0.005em;
+}
+
+::placeholder {
+  color: #85867e;
+  opacity: 1;
+}
+
+@media (max-width: 680px) {
+  :root {
+    --text-reading: 1rem;
+  }
+
+  body p {
+    font-size: max(0.875rem, 0.9em) !important;
+  }
+}
