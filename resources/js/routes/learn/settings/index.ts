@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentProfileController::learning
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 export const learning = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ learning.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::learning
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learning.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ learning.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::learning
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learning.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ learning.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::learning
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learning.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ learning.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 export const notifications = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -59,7 +59,7 @@ notifications.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ notifications.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -77,7 +77,7 @@ notifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -87,7 +87,7 @@ notifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 export const security = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -102,7 +102,7 @@ security.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.url = (options?: RouteQueryOptions) => {
@@ -111,7 +111,7 @@ security.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -120,7 +120,7 @@ security.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

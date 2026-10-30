@@ -65,7 +65,7 @@
   <PublicLayout>
     <main class="journal-page">
       <header class="journal-masthead wrap">
-        <div class="journal-kicker">THE KANRAM JOURNAL <span class="journal-kicker-divider">/</span> IDEAS, KNOWLEDGE &
+        <div class="journal-kicker">THE ALFRIK JOURNAL <span class="journal-kicker-divider">/</span> IDEAS, KNOWLEDGE &
           UPDATES</div>
         <div class="journal-title-row">
           <div>
@@ -136,7 +136,7 @@
               <p>{{ featured.excerpt }}</p>
               <div class="journal-feature-footer">
                 <div class="journal-author-mark">{{ (featured.author?.name || 'K').slice(0, 1) }}</div>
-                <div class="journal-author"><b>{{ featured.author?.name || 'Kanram Academy' }}</b><span>{{
+                <div class="journal-author"><b>{{ featured.author?.name || 'Alfrik Academy' }}</b><span>{{
                   featured.reading_minutes }} min read</span></div>
                 <Link class="journal-read-link" :href="wayfinderInsight.url({ slug: featured.slug })">Read story
                   <UiIcon name="arrow-up-right" :size="15" />
@@ -216,8 +216,8 @@
     --ink: #24281f;
     --muted: #777b72;
     --line: #e6e3da;
-    --paper: #faf9f6;
-    --green: #354532;
+    --paper: var(--academy-white);
+    --green: var(--academy-primary);
     background: var(--paper);
     min-height: 80vh;
     color: var(--ink);
@@ -233,7 +233,7 @@
     font-size: .68rem;
     letter-spacing: .16em;
     font-weight: 700;
-    color: #687463
+    color: var(--academy-muted)
   }
 
   .journal-kicker {
@@ -245,7 +245,7 @@
   .journal-kicker-dot {
     width: 7px;
     height: 7px;
-    background: #879d78;
+    background: var(--academy-primary);
     border-radius: 50%
   }
 
@@ -267,7 +267,7 @@
   }
 
   .journal-title-row h1 em {
-    color: #6b7d60;
+    color:var(--academy-secondary);
     font-weight: 400
   }
 
@@ -286,7 +286,7 @@
     padding: 13px 17px;
     border: 1px solid var(--line);
     border-radius: 4px;
-    color: #687463;
+    color:var(--academy-muted);
     font-size: .78rem;
     line-height: 1.5;
     margin-bottom: 3px
@@ -309,7 +309,7 @@
   .journal-topics button {
     border: 1px solid transparent;
     background: transparent;
-    color: #656b61;
+    color:var(--academy-muted);
     padding: 9px 13px;
     border-radius: 99px;
     font: inherit;
@@ -336,7 +336,7 @@
     gap: 9px;
     padding: 0 11px;
     border: 1px solid var(--line);
-    background: #fff;
+    background:var(--academy-surface);
     border-radius: 4px;
     color: #7a8075
   }
@@ -354,7 +354,7 @@
 
   .journal-search kbd {
     font-size: .7rem;
-    color: #92958e;
+    color:var(--academy-muted);
     border: 1px solid var(--line);
     border-radius: 3px;
     padding: 1px 5px
@@ -370,7 +370,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 17px;
-    color: #898b83;
+    color:var(--academy-muted);
     font-size: .75rem
   }
 
@@ -391,7 +391,7 @@
     display: grid;
     grid-template-columns: 1.18fr .82fr;
     min-height: 370px;
-    background: #fff;
+    background:var(--academy-surface);
     border: 1px solid var(--line)
   }
 
@@ -423,7 +423,7 @@
     left: 18px;
     top: 17px;
     background: rgba(250, 249, 246, .94);
-    color: #495744;
+    color:var(--academy-secondary);
     padding: 7px 10px;
     font-size: .62rem;
     letter-spacing: .1em;
@@ -441,7 +441,7 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    color: #83877f;
+    color:var(--academy-muted);
     font-size: .7rem;
     text-transform: capitalize
   }
@@ -470,13 +470,13 @@
 
   .journal-feature-copy h2 a:hover,
   .journal-card h3 a:hover {
-    color: #617657
+    color: var(--academy-secondary)
   }
 
   .journal-feature-copy>p,
   .journal-card-copy>p {
     font-size: .88rem;
-    color: #73786f;
+    color:var(--academy-muted);
     line-height: 1.7;
     margin: 0
   }
@@ -496,8 +496,8 @@
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: #e8ebdf;
-    color: #4b6044;
+    background:var(--academy-paper);
+    color:var(--academy-secondary);
     font: 1rem Georgia, serif
   }
 
@@ -511,7 +511,7 @@
 
   .journal-author b {
     font-weight: 600;
-    color: #363b32
+    color: var(--academy-ink)
   }
 
   .journal-author span {
@@ -523,7 +523,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #40523b;
+    color: var(--academy-secondary);
     text-decoration: none;
     font-size: .76rem;
     font-weight: 600
@@ -599,7 +599,7 @@
     border-top: 1px solid var(--line);
     margin-top: 35px;
     padding-top: 18px;
-    color: #858980;
+    color:var(--academy-muted);
     font-size: .76rem
   }
 
@@ -609,7 +609,7 @@
   }
 
   .journal-pagination a {
-    color: #40523b;
+    color: var(--academy-secondary);
     text-decoration: none
   }
 
@@ -626,9 +626,9 @@
     margin: 0 auto 18px;
     width: 46px;
     height: 46px;
-    background: #eff0e9;
+    background:var(--academy-paper);
     border-radius: 50%;
-    color: #607356
+    color: var(--academy-secondary)
   }
 
   .journal-empty h2 {
@@ -647,7 +647,7 @@
   .journal-empty button {
     border: 0;
     background: var(--green);
-    color: #fff;
+    color:var(--academy-contrast);
     padding: 10px 16px;
     border-radius: 3px;
     font: inherit;
@@ -656,7 +656,7 @@
   }
 
   .journal-signoff {
-    background: #efeee8;
+    background:var(--academy-paper);
     border-top: 1px solid var(--line);
     padding: 23px 0
   }
@@ -668,7 +668,7 @@
   }
 
   .journal-signoff span {
-    color: #697763;
+    color:var(--academy-secondary);
     font-size: .63rem;
     font-weight: 700;
     letter-spacing: .13em
@@ -676,7 +676,7 @@
 
   .journal-signoff p {
     flex: 1;
-    color: #6f746b;
+    color:var(--academy-muted);
     font-size: .78rem;
     margin: 0
   }
@@ -685,7 +685,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #3f5139;
+    color:var(--academy-primary);
     font-size: .75rem;
     text-decoration: none;
     font-weight: 600
@@ -792,14 +792,14 @@
     font-size: .61rem;
     letter-spacing: .13em;
     font-weight: 700;
-    color: #82877e;
+    color:var(--academy-muted);
     margin-right: 4px
   }
 
   .journal-subjects button {
     border: 1px solid var(--line);
-    background: #fff;
-    color: #62695e;
+    background:var(--academy-surface);
+    color:var(--academy-muted);
     padding: 7px 10px;
     border-radius: 99px;
     font: inherit;
@@ -809,9 +809,9 @@
 
   .journal-subjects button:hover,
   .journal-subjects button.active {
-    border-color: #607356;
-    background: #eff1eb;
-    color: #40523b
+    border-color: var(--academy-secondary);
+    background:var(--academy-paper);
+    color: var(--academy-secondary)
   }
 
   .journal-collection-links {
@@ -835,15 +835,15 @@
     gap: 7px;
     padding: 8px 10px;
     border: 1px solid var(--line);
-    background: #fff;
-    color: #52634a;
+    background:var(--academy-surface);
+    color: var(--academy-secondary);
     text-decoration: none;
     border-radius: 99px;
     font-size: .72rem
   }
 
   .journal-collection-links>a:hover {
-    border-color: #607356;
+    border-color: var(--academy-secondary);
     background: #eff1eb
   }
 
@@ -905,13 +905,13 @@
     border: 1px solid var(--line);
     border-radius: 0;
     background: transparent;
-    color: #52634a;
+    color: var(--academy-secondary);
     cursor: pointer
   }
 
   .journal-subject-arrow:hover:not(:disabled) {
-    background: #eff1eb;
-    border-color: #607356
+    background:var(--academy-paper);
+    border-color: var(--academy-secondary)
   }
 
   .journal-subject-arrow:disabled {
@@ -925,7 +925,7 @@
   }
 
   .journal-subject-track:focus-visible {
-    outline: 2px solid #718065;
+    outline: 2px solid var(--academy-secondary-light);
     outline-offset: 2px
   }
 
@@ -960,24 +960,24 @@
     padding: 0;
     border: 1px solid #d9ded5;
     border-radius: 0;
-    background: #f2f4ef;
-    color: #354532;
+    background:var(--academy-paper);
+    color: var(--academy-primary);
     cursor: pointer;
     transition: background-color .16s ease, border-color .16s ease, color .16s ease;
   }
   .journal-subjects .journal-subject-arrow:hover:not(:disabled) {
-    border-color: #354532;
-    background: #354532;
-    color: #fff;
+    border-color: var(--academy-primary);
+    background: var(--academy-primary);
+    color:var(--academy-contrast);
   }
   .journal-subjects .journal-subject-arrow:disabled {
-    border-color: #e5e6e0;
+    border-color:var(--academy-border);
     background: transparent;
-    color: #9da197;
+    color:var(--academy-muted);
     opacity: 1;
     cursor: default;
   }
   .journal-subjects .journal-subject-arrow:focus-visible {
-    outline: 2px solid #718065;
+    outline: 2px solid var(--academy-secondary-light);
     outline-offset: 2px;
   }</style>

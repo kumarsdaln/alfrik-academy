@@ -1,10 +1,10 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-export const update = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -16,10 +16,10 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-update.url = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { jobPost: args }
     }
@@ -49,20 +49,20 @@ update.url = (args: { jobPost: string | number | { id: string | number } } | [jo
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-update.put = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::close
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-export const close = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const close = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: close.url(args, options),
     method: 'delete',
 })
@@ -74,10 +74,10 @@ close.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::close
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-close.url = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+close.url = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { jobPost: args }
     }
@@ -107,17 +107,17 @@ close.url = (args: { jobPost: string | number | { id: string | number } } | [job
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::close
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-close.delete = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+close.delete = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: close.url(args, options),
     method: 'delete',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -132,7 +132,7 @@ store.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 store.url = (options?: RouteQueryOptions) => {
@@ -141,7 +141,7 @@ store.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({

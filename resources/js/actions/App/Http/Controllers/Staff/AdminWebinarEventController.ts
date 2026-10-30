@@ -81,7 +81,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:30
  * @route '/staff/manage/events/{webinarEvent}'
  */
-export const show = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const show = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -96,7 +96,7 @@ show.definition = {
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:30
  * @route '/staff/manage/events/{webinarEvent}'
  */
-show.url = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+show.url = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { webinarEvent: args }
     }
@@ -129,7 +129,7 @@ show.url = (args: { webinarEvent: string | number | { id: string | number } } | 
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:30
  * @route '/staff/manage/events/{webinarEvent}'
  */
-show.get = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+show.get = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -138,7 +138,7 @@ show.get = (args: { webinarEvent: string | number | { id: string | number } } | 
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:30
  * @route '/staff/manage/events/{webinarEvent}'
  */
-show.head = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+show.head = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: show.url(args, options),
     method: 'head',
 })
@@ -148,7 +148,7 @@ show.head = (args: { webinarEvent: string | number | { id: string | number } } |
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:55
  * @route '/staff/manage/events/{webinarEvent}'
  */
-export const update = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -163,7 +163,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:55
  * @route '/staff/manage/events/{webinarEvent}'
  */
-update.url = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { webinarEvent: args }
     }
@@ -196,7 +196,7 @@ update.url = (args: { webinarEvent: string | number | { id: string | number } } 
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:55
  * @route '/staff/manage/events/{webinarEvent}'
  */
-update.put = (args: { webinarEvent: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { webinarEvent: number | { id: number } } | [webinarEvent: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -206,7 +206,7 @@ update.put = (args: { webinarEvent: string | number | { id: string | number } } 
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-export const updateRegistration = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const updateRegistration = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: updateRegistration.url(args, options),
     method: 'patch',
 })
@@ -221,7 +221,7 @@ updateRegistration.definition = {
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-updateRegistration.url = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions) => {
+updateRegistration.url = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions) => {
     if (Array.isArray(args)) {
         args = {
                     webinarEvent: args[0],
@@ -251,7 +251,7 @@ updateRegistration.url = (args: { webinarEvent: string | number | { id: string |
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-updateRegistration.patch = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+updateRegistration.patch = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: updateRegistration.url(args, options),
     method: 'patch',
 })

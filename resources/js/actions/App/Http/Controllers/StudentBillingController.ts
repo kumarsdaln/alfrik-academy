@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentBillingController::purchases
- * @see app/Http/Controllers/StudentBillingController.php:101
+ * @see app/Http/Controllers/StudentBillingController.php:188
  * @route '/learn/purchases'
  */
 export const purchases = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ purchases.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::purchases
- * @see app/Http/Controllers/StudentBillingController.php:101
+ * @see app/Http/Controllers/StudentBillingController.php:188
  * @route '/learn/purchases'
  */
 purchases.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ purchases.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::purchases
- * @see app/Http/Controllers/StudentBillingController.php:101
+ * @see app/Http/Controllers/StudentBillingController.php:188
  * @route '/learn/purchases'
  */
 purchases.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ purchases.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentBillingController::purchases
- * @see app/Http/Controllers/StudentBillingController.php:101
+ * @see app/Http/Controllers/StudentBillingController.php:188
  * @route '/learn/purchases'
  */
 purchases.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ purchases.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::activity
- * @see app/Http/Controllers/StudentBillingController.php:193
+ * @see app/Http/Controllers/StudentBillingController.php:364
  * @route '/learn/activity'
  */
 export const activity = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -59,7 +59,7 @@ activity.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::activity
- * @see app/Http/Controllers/StudentBillingController.php:193
+ * @see app/Http/Controllers/StudentBillingController.php:364
  * @route '/learn/activity'
  */
 activity.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ activity.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::activity
- * @see app/Http/Controllers/StudentBillingController.php:193
+ * @see app/Http/Controllers/StudentBillingController.php:364
  * @route '/learn/activity'
  */
 activity.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -77,7 +77,7 @@ activity.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentBillingController::activity
- * @see app/Http/Controllers/StudentBillingController.php:193
+ * @see app/Http/Controllers/StudentBillingController.php:364
  * @route '/learn/activity'
  */
 activity.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -87,7 +87,7 @@ activity.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::events
- * @see app/Http/Controllers/StudentBillingController.php:142
+ * @see app/Http/Controllers/StudentBillingController.php:270
  * @route '/learn/events'
  */
 export const events = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -102,7 +102,7 @@ events.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::events
- * @see app/Http/Controllers/StudentBillingController.php:142
+ * @see app/Http/Controllers/StudentBillingController.php:270
  * @route '/learn/events'
  */
 events.url = (options?: RouteQueryOptions) => {
@@ -111,7 +111,7 @@ events.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::events
- * @see app/Http/Controllers/StudentBillingController.php:142
+ * @see app/Http/Controllers/StudentBillingController.php:270
  * @route '/learn/events'
  */
 events.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -120,7 +120,7 @@ events.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentBillingController::events
- * @see app/Http/Controllers/StudentBillingController.php:142
+ * @see app/Http/Controllers/StudentBillingController.php:270
  * @route '/learn/events'
  */
 events.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -130,7 +130,7 @@ events.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::checkoutReturn
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 export const checkoutReturn = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -145,7 +145,7 @@ checkoutReturn.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::checkoutReturn
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 checkoutReturn.url = (options?: RouteQueryOptions) => {
@@ -154,7 +154,7 @@ checkoutReturn.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::checkoutReturn
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 checkoutReturn.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -163,7 +163,7 @@ checkoutReturn.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentBillingController::checkoutReturn
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 checkoutReturn.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

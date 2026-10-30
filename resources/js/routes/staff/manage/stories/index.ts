@@ -38,7 +38,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
  * @see app/Http/Controllers/Staff/AdminStoryController.php:35
  * @route '/staff/manage/stories/{story}'
  */
-export const update = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -53,7 +53,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminStoryController.php:35
  * @route '/staff/manage/stories/{story}'
  */
-update.url = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { story: args }
     }
@@ -86,7 +86,7 @@ update.url = (args: { story: string | number | { id: string | number } } | [stor
  * @see app/Http/Controllers/Staff/AdminStoryController.php:35
  * @route '/staff/manage/stories/{story}'
  */
-update.put = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -96,7 +96,7 @@ update.put = (args: { story: string | number | { id: string | number } } | [stor
  * @see app/Http/Controllers/Staff/AdminStoryController.php:45
  * @route '/staff/manage/stories/{story}'
  */
-export const destroy = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const destroy = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroy.url(args, options),
     method: 'delete',
 })
@@ -111,7 +111,7 @@ destroy.definition = {
  * @see app/Http/Controllers/Staff/AdminStoryController.php:45
  * @route '/staff/manage/stories/{story}'
  */
-destroy.url = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+destroy.url = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { story: args }
     }
@@ -144,7 +144,7 @@ destroy.url = (args: { story: string | number | { id: string | number } } | [sto
  * @see app/Http/Controllers/Staff/AdminStoryController.php:45
  * @route '/staff/manage/stories/{story}'
  */
-destroy.delete = (args: { story: string | number | { id: string | number } } | [story: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+destroy.delete = (args: { story: number | { id: number } } | [story: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroy.url(args, options),
     method: 'delete',
 })

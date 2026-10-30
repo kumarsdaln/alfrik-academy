@@ -12,7 +12,7 @@ const typeLabels = { lesson: 'LESSON COMPLETED', enrollment: 'COURSE ENROLLMENT'
 
 <template>
   <div class="dashboard-shell"><LearningSidebar active="activity" />
-    <main class="dash-main"><header class="dash-top"><Link :href="wayfinderDashboard1().url"><UiIcon name="arrow-left" /> Learning home</Link><span>Your Kanram account</span></header>
+    <main class="dash-main"><header class="dash-top"><Link :href="wayfinderDashboard1().url"><UiIcon name="arrow-left" /> Learning home</Link><span>Your Alfrik account</span></header>
       <div class="dash-content account-page-content activity-page-content"><div class="learner-index-heading"><div><div class="eyebrow">YOUR LEARNING RECORD</div><h1>Learning activity</h1><p>A running record of classes attended, lessons finished, and work submitted.</p></div></div>
         <section v-if="activity.data.length" class="activity-record" aria-label="Recent learning activity">
           <div class="activity-record-heading"><h2>Recent activity</h2><span>Newest first · {{ activity.data.length }} loaded</span></div>

@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentLearningController::dashboard
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 export const dashboard = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ dashboard.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::dashboard
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 dashboard.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ dashboard.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::dashboard
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ dashboard.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::dashboard
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ dashboard.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::courses
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 export const courses = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -59,7 +59,7 @@ courses.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::courses
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 courses.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ courses.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::courses
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 courses.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -77,7 +77,7 @@ courses.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::courses
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 courses.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -87,10 +87,10 @@ courses.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::course
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-export const course = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const course = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: course.url(args, options),
     method: 'get',
 })
@@ -102,10 +102,10 @@ course.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::course
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-course.url = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions) => {
+course.url = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { course: args }
     }
@@ -135,26 +135,26 @@ course.url = (args: { course: string | number | { slug: string | number } } | [c
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::course
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-course.get = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+course.get = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: course.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::course
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-course.head = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+course.head = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: course.url(args, options),
     method: 'head',
 })
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::quiz
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 export const quiz = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -169,7 +169,7 @@ quiz.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::quiz
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 quiz.url = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -197,7 +197,7 @@ quiz.url = (args: { quizId: string | number } | [quizId: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::quiz
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 quiz.get = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -206,7 +206,7 @@ quiz.get = (args: { quizId: string | number } | [quizId: string | number ] | str
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::quiz
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 quiz.head = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -216,7 +216,7 @@ quiz.head = (args: { quizId: string | number } | [quizId: string | number ] | st
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitQuiz
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 export const submitQuiz = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -231,7 +231,7 @@ submitQuiz.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitQuiz
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 submitQuiz.url = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -259,7 +259,7 @@ submitQuiz.url = (args: { quizId: string | number } | [quizId: string | number ]
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitQuiz
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 submitQuiz.post = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -269,10 +269,10 @@ submitQuiz.post = (args: { quizId: string | number } | [quizId: string | number 
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::lesson
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-export const lesson = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const lesson = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: lesson.url(args, options),
     method: 'get',
 })
@@ -284,10 +284,10 @@ lesson.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::lesson
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-lesson.url = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+lesson.url = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { lesson: args }
     }
@@ -317,29 +317,29 @@ lesson.url = (args: { lesson: string | number | { id: string | number } } | [les
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::lesson
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-lesson.get = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+lesson.get = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: lesson.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::lesson
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-lesson.head = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+lesson.head = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: lesson.url(args, options),
     method: 'head',
 })
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::completeLesson
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-export const completeLesson = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+export const completeLesson = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: completeLesson.url(args, options),
     method: 'post',
 })
@@ -351,10 +351,10 @@ completeLesson.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::completeLesson
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-completeLesson.url = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+completeLesson.url = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { lesson: args }
     }
@@ -384,17 +384,17 @@ completeLesson.url = (args: { lesson: string | number | { id: string | number } 
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::completeLesson
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-completeLesson.post = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+completeLesson.post = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: completeLesson.url(args, options),
     method: 'post',
 })
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignments
- * @see app/Http/Controllers/StudentLearningController.php:178
+ * @see app/Http/Controllers/StudentLearningController.php:328
  * @route '/learn/assignments'
  */
 export const assignments = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -409,7 +409,7 @@ assignments.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignments
- * @see app/Http/Controllers/StudentLearningController.php:178
+ * @see app/Http/Controllers/StudentLearningController.php:328
  * @route '/learn/assignments'
  */
 assignments.url = (options?: RouteQueryOptions) => {
@@ -418,7 +418,7 @@ assignments.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignments
- * @see app/Http/Controllers/StudentLearningController.php:178
+ * @see app/Http/Controllers/StudentLearningController.php:328
  * @route '/learn/assignments'
  */
 assignments.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -427,7 +427,7 @@ assignments.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignments
- * @see app/Http/Controllers/StudentLearningController.php:178
+ * @see app/Http/Controllers/StudentLearningController.php:328
  * @route '/learn/assignments'
  */
 assignments.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -437,7 +437,7 @@ assignments.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignment
- * @see app/Http/Controllers/StudentLearningController.php:435
+ * @see app/Http/Controllers/StudentLearningController.php:829
  * @route '/learn/assignments/{assignmentId}'
  */
 export const assignment = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -452,7 +452,7 @@ assignment.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignment
- * @see app/Http/Controllers/StudentLearningController.php:435
+ * @see app/Http/Controllers/StudentLearningController.php:829
  * @route '/learn/assignments/{assignmentId}'
  */
 assignment.url = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -480,7 +480,7 @@ assignment.url = (args: { assignmentId: string | number } | [assignmentId: strin
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignment
- * @see app/Http/Controllers/StudentLearningController.php:435
+ * @see app/Http/Controllers/StudentLearningController.php:829
  * @route '/learn/assignments/{assignmentId}'
  */
 assignment.get = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -489,7 +489,7 @@ assignment.get = (args: { assignmentId: string | number } | [assignmentId: strin
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::assignment
- * @see app/Http/Controllers/StudentLearningController.php:435
+ * @see app/Http/Controllers/StudentLearningController.php:829
  * @route '/learn/assignments/{assignmentId}'
  */
 assignment.head = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -499,7 +499,7 @@ assignment.head = (args: { assignmentId: string | number } | [assignmentId: stri
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitAssignment
- * @see app/Http/Controllers/StudentLearningController.php:465
+ * @see app/Http/Controllers/StudentLearningController.php:875
  * @route '/learn/assignments/{assignmentId}'
  */
 export const submitAssignment = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -514,7 +514,7 @@ submitAssignment.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitAssignment
- * @see app/Http/Controllers/StudentLearningController.php:465
+ * @see app/Http/Controllers/StudentLearningController.php:875
  * @route '/learn/assignments/{assignmentId}'
  */
 submitAssignment.url = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -542,7 +542,7 @@ submitAssignment.url = (args: { assignmentId: string | number } | [assignmentId:
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submitAssignment
- * @see app/Http/Controllers/StudentLearningController.php:465
+ * @see app/Http/Controllers/StudentLearningController.php:875
  * @route '/learn/assignments/{assignmentId}'
  */
 submitAssignment.post = (args: { assignmentId: string | number } | [assignmentId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -552,7 +552,7 @@ submitAssignment.post = (args: { assignmentId: string | number } | [assignmentId
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::schedule
- * @see app/Http/Controllers/StudentLearningController.php:108
+ * @see app/Http/Controllers/StudentLearningController.php:187
  * @route '/learn/schedule'
  */
 export const schedule = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -567,7 +567,7 @@ schedule.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::schedule
- * @see app/Http/Controllers/StudentLearningController.php:108
+ * @see app/Http/Controllers/StudentLearningController.php:187
  * @route '/learn/schedule'
  */
 schedule.url = (options?: RouteQueryOptions) => {
@@ -576,7 +576,7 @@ schedule.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::schedule
- * @see app/Http/Controllers/StudentLearningController.php:108
+ * @see app/Http/Controllers/StudentLearningController.php:187
  * @route '/learn/schedule'
  */
 schedule.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -585,7 +585,7 @@ schedule.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::schedule
- * @see app/Http/Controllers/StudentLearningController.php:108
+ * @see app/Http/Controllers/StudentLearningController.php:187
  * @route '/learn/schedule'
  */
 schedule.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -595,7 +595,7 @@ schedule.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::calendar
- * @see app/Http/Controllers/StudentLearningController.php:524
+ * @see app/Http/Controllers/StudentLearningController.php:1027
  * @route '/learn/calendar.ics'
  */
 export const calendar = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -610,7 +610,7 @@ calendar.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::calendar
- * @see app/Http/Controllers/StudentLearningController.php:524
+ * @see app/Http/Controllers/StudentLearningController.php:1027
  * @route '/learn/calendar.ics'
  */
 calendar.url = (options?: RouteQueryOptions) => {
@@ -619,7 +619,7 @@ calendar.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::calendar
- * @see app/Http/Controllers/StudentLearningController.php:524
+ * @see app/Http/Controllers/StudentLearningController.php:1027
  * @route '/learn/calendar.ics'
  */
 calendar.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -628,7 +628,7 @@ calendar.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::calendar
- * @see app/Http/Controllers/StudentLearningController.php:524
+ * @see app/Http/Controllers/StudentLearningController.php:1027
  * @route '/learn/calendar.ics'
  */
 calendar.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -638,10 +638,10 @@ calendar.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::session
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-export const session = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const session = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: session.url(args, options),
     method: 'get',
 })
@@ -653,10 +653,10 @@ session.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::session
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-session.url = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+session.url = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { liveSession: args }
     }
@@ -686,19 +686,19 @@ session.url = (args: { liveSession: string | number | { id: string | number } } 
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::session
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-session.get = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+session.get = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: session.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::session
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-session.head = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+session.head = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: session.url(args, options),
     method: 'head',
 })

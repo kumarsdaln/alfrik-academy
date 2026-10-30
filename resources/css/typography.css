@@ -70,7 +70,7 @@ body :is(h1, h2) {
 }
 
 ::placeholder {
-  color: #85867e;
+  color: var(--academy-muted);
   opacity: 1;
 }
 

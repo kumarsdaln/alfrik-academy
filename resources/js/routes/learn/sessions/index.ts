@@ -1,10 +1,10 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-export const show = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const show = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -16,10 +16,10 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-show.url = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+show.url = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { liveSession: args }
     }
@@ -49,19 +49,19 @@ show.url = (args: { liveSession: string | number | { id: string | number } } | [
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-show.get = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+show.get = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:508
+ * @see app/Http/Controllers/StudentLearningController.php:993
  * @route '/learn/sessions/{liveSession}'
  */
-show.head = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+show.head = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: show.url(args, options),
     method: 'head',
 })

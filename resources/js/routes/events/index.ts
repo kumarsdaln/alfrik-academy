@@ -44,10 +44,10 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::show
- * @see app/Http/Controllers/WebinarEventController.php:35
+ * @see app/Http/Controllers/WebinarEventController.php:76
  * @route '/events/{event}'
  */
-export const show = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const show = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -59,10 +59,10 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::show
- * @see app/Http/Controllers/WebinarEventController.php:35
+ * @see app/Http/Controllers/WebinarEventController.php:76
  * @route '/events/{event}'
  */
-show.url = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions) => {
+show.url = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { event: args }
     }
@@ -92,29 +92,29 @@ show.url = (args: { event: string | number | { slug: string | number } } | [even
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::show
- * @see app/Http/Controllers/WebinarEventController.php:35
+ * @see app/Http/Controllers/WebinarEventController.php:76
  * @route '/events/{event}'
  */
-show.get = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+show.get = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\WebinarEventController::show
- * @see app/Http/Controllers/WebinarEventController.php:35
+ * @see app/Http/Controllers/WebinarEventController.php:76
  * @route '/events/{event}'
  */
-show.head = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+show.head = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: show.url(args, options),
     method: 'head',
 })
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::register
- * @see app/Http/Controllers/WebinarEventController.php:72
+ * @see app/Http/Controllers/WebinarEventController.php:173
  * @route '/events/{event}/register'
  */
-export const register = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+export const register = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: register.url(args, options),
     method: 'post',
 })
@@ -126,10 +126,10 @@ register.definition = {
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::register
- * @see app/Http/Controllers/WebinarEventController.php:72
+ * @see app/Http/Controllers/WebinarEventController.php:173
  * @route '/events/{event}/register'
  */
-register.url = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions) => {
+register.url = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { event: args }
     }
@@ -159,10 +159,10 @@ register.url = (args: { event: string | number | { slug: string | number } } | [
 
 /**
 * @see \App\Http\Controllers\WebinarEventController::register
- * @see app/Http/Controllers/WebinarEventController.php:72
+ * @see app/Http/Controllers/WebinarEventController.php:173
  * @route '/events/{event}/register'
  */
-register.post = (args: { event: string | number | { slug: string | number } } | [event: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+register.post = (args: { event: string | { slug: string } } | [event: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: register.url(args, options),
     method: 'post',
 })

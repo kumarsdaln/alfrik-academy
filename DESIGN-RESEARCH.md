@@ -1,4 +1,4 @@
-# Kanram Academy public experience: design research
+# Alfrik Academy public experience: design research
 
 ## V4: connect learning to community and work
 
@@ -42,12 +42,12 @@ This release implements the learner-side quiz workflow and teacher assignment re
 
 ## Product direction
 
-Kanram Academy is a live-first learning platform. The public site should help a prospective learner answer four questions quickly: what will I learn, who will teach me, when will we meet, and what will the complete program look like?
+Alfrik Academy is a live-first learning platform. The public site should help a prospective learner answer four questions quickly: what will I learn, who will teach me, when will we meet, and what will the complete program look like?
 
 ## Reference patterns
 
 - **Maven course discovery:** the marketplace puts the program and cohort timing together, helping people compare live offerings by topic and start date. Its student syllabus guidance describes a weekly home for events, lessons, resources, and projects, with modules organized around learning outcomes. [Maven courses](https://maven.com/courses) · [Maven syllabus and schedule guide](https://help.maven.com/en/articles/5597459-home-student-syllabus-schedule)
-- **Outschool class formats:** the official guide distinguishes scheduled live classes from self-paced classes and makes duration and meeting cadence explicit. Kanram Academy similarly gives live schedule, cohort start, duration, and class size clear placement. [Outschool class formats](https://support.outschool.com/en/articles/19491-how-do-outschool-classes-work)
+- **Outschool class formats:** the official guide distinguishes scheduled live classes from self-paced classes and makes duration and meeting cadence explicit. Alfrik Academy similarly gives live schedule, cohort start, duration, and class size clear placement. [Outschool class formats](https://support.outschool.com/en/articles/19491-how-do-outschool-classes-work)
 
 ## Design decisions
 

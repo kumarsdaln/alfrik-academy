@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffController::exportMethod
- * @see app/Http/Controllers/StaffController.php:25
+ * @see app/Http/Controllers/StaffController.php:28
  * @route '/staff/gradebook/export'
  */
 export const exportMethod = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ exportMethod.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffController::exportMethod
- * @see app/Http/Controllers/StaffController.php:25
+ * @see app/Http/Controllers/StaffController.php:28
  * @route '/staff/gradebook/export'
  */
 exportMethod.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ exportMethod.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffController::exportMethod
- * @see app/Http/Controllers/StaffController.php:25
+ * @see app/Http/Controllers/StaffController.php:28
  * @route '/staff/gradebook/export'
  */
 exportMethod.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ exportMethod.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffController::exportMethod
- * @see app/Http/Controllers/StaffController.php:25
+ * @see app/Http/Controllers/StaffController.php:28
  * @route '/staff/gradebook/export'
  */
 exportMethod.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

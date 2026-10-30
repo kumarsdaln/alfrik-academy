@@ -4,7 +4,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefa
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-export const update = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const update = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })
@@ -19,7 +19,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-update.url = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions) => {
+update.url = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions) => {
     if (Array.isArray(args)) {
         args = {
                     webinarEvent: args[0],
@@ -49,7 +49,7 @@ update.url = (args: { webinarEvent: string | number | { id: string | number }, r
  * @see app/Http/Controllers/Staff/AdminWebinarEventController.php:75
  * @route '/staff/manage/events/{webinarEvent}/registrations/{registration}'
  */
-update.patch = (args: { webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } } | [webinarEvent: string | number | { id: string | number }, registration: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+update.patch = (args: { webinarEvent: number | { id: number }, registration: number | { id: number } } | [webinarEvent: number | { id: number }, registration: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })

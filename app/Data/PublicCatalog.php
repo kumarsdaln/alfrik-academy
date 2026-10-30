@@ -90,13 +90,13 @@ class PublicCatalog
             ->get()
             ->map(function (Course $course) use ($mentorProfiles): array {
                 $mentor = $course->mentors->first();
-                $mentorSlug = Str::slug($mentor?->name ?? 'Kanram Academy mentor');
+                $mentorSlug = Str::slug($mentor?->name ?? 'Alfrik Academy mentor');
                 $mentorProfile = $mentorProfiles->get($mentorSlug);
                 $cohort = $course->cohorts->sortBy('starts_on')->first();
                 $nextSession = $cohort?->sessions->first(fn ($session) => $session->starts_at?->isFuture());
                 $reviews = $course->reviews->map(fn ($review) => [
-                    'author' => $review->user?->name ?? 'Kanram learner',
-                    'role' => 'Kanram learner · Cohort member',
+                    'author' => $review->user?->name ?? 'Alfrik learner',
+                    'role' => 'Alfrik learner · Cohort member',
                     'rating' => $review->rating,
                     'quote' => $review->body,
                 ])->values()->all();
@@ -107,7 +107,7 @@ class PublicCatalog
                     'category' => $course->category?->name ?? 'Learning',
                     'category_slug' => $course->category?->slug ?? 'learning',
                     'image' => $course->cover_image ?: '/images/learning/product-design.png',
-                    'mentor' => $mentor?->name ?? 'Kanram Academy team',
+                    'mentor' => $mentor?->name ?? 'Alfrik Academy team',
                     'mentor_slug' => $mentorSlug,
                     'mentor_title' => $mentorProfile['role'] ?? $mentor?->pivot?->title ?? 'Cohort mentor',
                     'weeks' => $course->duration_weeks,
@@ -171,7 +171,7 @@ class PublicCatalog
                 'initials' => collect(explode(' ', $user->name))->take(2)->map(fn ($part) => mb_strtoupper(mb_substr($part, 0, 1)))->implode(''),
                 'image' => $user->avatar_path ?: ($profile['image'] ?? '/images/learning/live-class.png'),
                 'field' => strtoupper(implode(' & ', $categories) ?: 'LEARNING MENTOR'),
-                'role' => $courses->first()?->pivot?->title ?: ($profile['role'] ?? 'Kanram Academy mentor'),
+                'role' => $courses->first()?->pivot?->title ?: ($profile['role'] ?? 'Alfrik Academy mentor'),
                 'learners' => number_format($students).'+',
                 'courses' => $courses->pluck('slug')->values()->all(),
                 'intro' => $user->bio ? str($user->bio)->limit(150)->toString() : ($profile['intro'] ?? 'I help learners build practical skills with a supportive cohort.'),
@@ -193,7 +193,7 @@ class PublicCatalog
     public static function stories(): array
     {
         return [
-            ['slug' => 'jordan-found-a-new-way-to-design', 'name' => 'Jordan Lee', 'initials' => 'JL', 'role' => 'Product designer at Linear', 'course' => 'Product Design Sprint', 'course_slug' => 'product-design-sprint', 'cohort' => 'Cohort 24', 'color' => 'lilac', 'quote' => 'I came for the design skills. I left with a whole new way to think — and a group chat I’ll probably keep forever.', 'story' => 'Jordan joined Kanram Academy wanting a stronger product design process. The weekly studio gave them a place to try ideas early, get honest feedback, and learn how to explain the decisions behind the work. Their final case study became the portfolio piece that helped them move into a product designer role.', 'outcome' => 'Moved into a product design role', 'mark' => '✳'],
+            ['slug' => 'jordan-found-a-new-way-to-design', 'name' => 'Jordan Lee', 'initials' => 'JL', 'role' => 'Product designer at Linear', 'course' => 'Product Design Sprint', 'course_slug' => 'product-design-sprint', 'cohort' => 'Cohort 24', 'color' => 'lilac', 'quote' => 'I came for the design skills. I left with a whole new way to think — and a group chat I’ll probably keep forever.', 'story' => 'Jordan joined Alfrik Academy wanting a stronger product design process. The weekly studio gave them a place to try ideas early, get honest feedback, and learn how to explain the decisions behind the work. Their final case study became the portfolio piece that helped them move into a product designer role.', 'outcome' => 'Moved into a product design role', 'mark' => '✳'],
             ['slug' => 'arjun-shipped-his-first-app', 'name' => 'Arjun Mehta', 'initials' => 'AM', 'role' => 'Junior developer', 'course' => 'Full-stack Web Development', 'course_slug' => 'full-stack-web-development', 'cohort' => 'Cohort 19', 'color' => 'blue', 'quote' => 'I stopped collecting tutorials and shipped something real. The cohort made the difficult weeks feel possible.', 'story' => 'Arjun had worked through online lessons for months but struggled to connect the pieces. Building one application with Ethan and a small cohort gave him a clear path through the browser, API, and database. He now has a deployed project he can confidently talk through.', 'outcome' => 'Built and deployed a portfolio app', 'mark' => '⌘'],
             ['slug' => 'nina-found-the-words-for-her-brand', 'name' => 'Nina Patel', 'initials' => 'NP', 'role' => 'Founder at Little Field', 'course' => 'Brand Strategy & Storytelling', 'course_slug' => 'brand-strategy-storytelling', 'cohort' => 'Cohort 18', 'color' => 'orange', 'quote' => 'Olivia helped me find the words for what I had been trying to say for years. I use the playbook every week.', 'story' => 'Nina had a business customers loved but found it hard to explain what made it different. In the live brand studio, she listened to customers, shaped a clear position, and built a messaging playbook she now uses across her site and product launches.', 'outcome' => 'Created a practical brand playbook', 'mark' => '◉'],
         ];
@@ -202,7 +202,7 @@ class PublicCatalog
     public static function faqs(): array
     {
         return [
-            ['question' => 'Are classes live or self-paced?', 'answer' => 'Live classes are the heart of every Kanram Academy program. You meet your mentor and cohort on a regular schedule for discussion, practice, feedback, and studio time. Short recordings and resources help you prepare or catch up between sessions.'],
+            ['question' => 'Are classes live or self-paced?', 'answer' => 'Live classes are the heart of every Alfrik Academy program. You meet your mentor and cohort on a regular schedule for discussion, practice, feedback, and studio time. Short recordings and resources help you prepare or catch up between sessions.'],
             ['question' => 'Do I need experience before joining?', 'answer' => 'Most programs are beginner friendly. Each course page explains who it is for and what to bring. If you are unsure, send us a note before you enroll and we will help you find the right starting point.'],
             ['question' => 'What if I miss a live class?', 'answer' => 'We share a recording and class notes after each session. You can also ask questions in the cohort space and bring unfinished work to the next office hour.'],
             ['question' => 'How large are the cohorts?', 'answer' => 'Cohorts are intentionally small, usually 16 to 20 learners, so everyone has room to participate and receive personal feedback. The exact limit appears on each course page.'],

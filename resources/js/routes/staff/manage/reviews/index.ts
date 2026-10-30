@@ -4,7 +4,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefa
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:256
  * @route '/staff/manage/reviews/{review}'
  */
-export const update = (args: { review: string | number | { id: string | number } } | [review: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const update = (args: { review: number | { id: number } } | [review: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })
@@ -19,7 +19,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:256
  * @route '/staff/manage/reviews/{review}'
  */
-update.url = (args: { review: string | number | { id: string | number } } | [review: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { review: number | { id: number } } | [review: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { review: args }
     }
@@ -52,7 +52,7 @@ update.url = (args: { review: string | number | { id: string | number } } | [rev
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:256
  * @route '/staff/manage/reviews/{review}'
  */
-update.patch = (args: { review: string | number | { id: string | number } } | [review: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+update.patch = (args: { review: number | { id: number } } | [review: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })

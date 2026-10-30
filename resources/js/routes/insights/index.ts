@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:81
+* @see \App\Http\Controllers\Insights\InsightController::index
+ * @see app/Http/Controllers/Insights/InsightController.php:13
  * @route '/insights'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -15,8 +15,8 @@ index.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:81
+* @see \App\Http\Controllers\Insights\InsightController::index
+ * @see app/Http/Controllers/Insights/InsightController.php:13
  * @route '/insights'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -24,8 +24,8 @@ index.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:81
+* @see \App\Http\Controllers\Insights\InsightController::index
+ * @see app/Http/Controllers/Insights/InsightController.php:13
  * @route '/insights'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -33,8 +33,8 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:81
+* @see \App\Http\Controllers\Insights\InsightController::index
+ * @see app/Http/Controllers/Insights/InsightController.php:13
  * @route '/insights'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -43,8 +43,8 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:105
+* @see \App\Http\Controllers\Insights\InsightController::show
+ * @see app/Http/Controllers/Insights/InsightController.php:53
  * @route '/insights/{slug}'
  */
 export const show = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -58,8 +58,8 @@ show.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:105
+* @see \App\Http\Controllers\Insights\InsightController::show
+ * @see app/Http/Controllers/Insights/InsightController.php:53
  * @route '/insights/{slug}'
  */
 show.url = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -86,8 +86,8 @@ show.url = (args: { slug: string | number } | [slug: string | number ] | string 
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:105
+* @see \App\Http\Controllers\Insights\InsightController::show
+ * @see app/Http/Controllers/Insights/InsightController.php:53
  * @route '/insights/{slug}'
  */
 show.get = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -95,8 +95,8 @@ show.get = (args: { slug: string | number } | [slug: string | number ] | string 
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:105
+* @see \App\Http\Controllers\Insights\InsightController::show
+ * @see app/Http/Controllers/Insights/InsightController.php:53
  * @route '/insights/{slug}'
  */
 show.head = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({

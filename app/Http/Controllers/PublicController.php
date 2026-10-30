@@ -209,7 +209,7 @@ class PublicController extends Controller
         $databaseStories = LearnerStory::query()->where('status', 'published')->where('published_at', '<=', now())->with('course')->latest('published_at')->get()->map(function (LearnerStory $entry) use ($courseImages, $staticBySlug) {
             $static = $staticBySlug->get($entry->slug, []);
             $courseSlug = $entry->course?->slug ?? ($static['course_slug'] ?? null);
-            $courseTitle = $entry->course?->title ?? ($static['course'] ?? 'Learning at Kanram');
+            $courseTitle = $entry->course?->title ?? ($static['course'] ?? 'Learning at Alfrik');
 
             return array_replace($static, [
                 'slug' => $entry->slug, 'name' => $entry->name,

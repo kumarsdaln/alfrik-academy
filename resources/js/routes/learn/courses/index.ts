@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentLearningController::index
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ index.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::index
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ index.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::index
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::index
- * @see app/Http/Controllers/StudentLearningController.php:143
+ * @see app/Http/Controllers/StudentLearningController.php:249
  * @route '/learn/courses'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,10 +44,10 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-export const show = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const show = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -59,10 +59,10 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-show.url = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions) => {
+show.url = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { course: args }
     }
@@ -92,19 +92,19 @@ show.url = (args: { course: string | number | { slug: string | number } } | [cou
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-show.get = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+show.get = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:234
+ * @see app/Http/Controllers/StudentLearningController.php:410
  * @route '/learn/courses/{course}'
  */
-show.head = (args: { course: string | number | { slug: string | number } } | [course: string | number | { slug: string | number } ] | string | number | { slug: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+show.head = (args: { course: string | { slug: string } } | [course: string | { slug: string } ] | string | { slug: string }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: show.url(args, options),
     method: 'head',
 })

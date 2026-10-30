@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="theme-color" content="#263b31">
-    <title inertia>Kanram Academy — Learn live, grow further</title>
+    <meta name="theme-color" content="#B00050">
+    <title inertia>Alfrik Academy — Learn live, grow further</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @inertiaHead
 </head>

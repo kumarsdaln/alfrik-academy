@@ -8,7 +8,7 @@ class PublicPageDefaults
     {
         return [
             'about' => [
-                'eyebrow' => 'ABOUT KANRAM ACADEMY', 'title' => 'Learning should feel', 'emphasis' => 'like being in it together.',
+                'eyebrow' => 'ABOUT ALFRIK ACADEMY', 'title' => 'Learning should feel', 'emphasis' => 'like being in it together.',
                 'intro' => 'We make small, live learning programs for people who want to grow their skills and do meaningful work with others.',
                 'section_title' => 'Practice is better with people.',
                 'section_body' => 'Our programs bring expert mentors and curious learners into the same room. You learn by asking, making, sharing drafts, and trying again. Every cohort is small enough for real conversation and useful feedback.',
@@ -18,7 +18,7 @@ class PublicPageDefaults
             ],
             'how' => [
                 'eyebrow' => 'A CLASSROOM BUILT AROUND PEOPLE', 'title' => 'Show up. Make things.', 'emphasis' => 'Move forward.',
-                'intro' => 'Kanram Academy programs turn learning into a shared practice: live sessions, useful feedback, and work you can take into the world.',
+                'intro' => 'Alfrik Academy programs turn learning into a shared practice: live sessions, useful feedback, and work you can take into the world.',
                 'steps' => [
                     ['number' => '01', 'title' => 'Find your next thing', 'text' => 'Browse programs by topic, meet the mentors, and read the full curriculum before you decide.'],
                     ['number' => '02', 'title' => 'Join a small cohort', 'text' => 'Choose a start date and a schedule that fits. Meet the people who will learn alongside you.'],

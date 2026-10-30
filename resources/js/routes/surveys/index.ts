@@ -1,8 +1,8 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
 import responses from './responses'
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:18
+* @see \App\Http\Controllers\Insights\SurveyController::index
+ * @see app/Http/Controllers/Insights/SurveyController.php:16
  * @route '/surveys'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,8 +16,8 @@ index.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:18
+* @see \App\Http\Controllers\Insights\SurveyController::index
+ * @see app/Http/Controllers/Insights/SurveyController.php:16
  * @route '/surveys'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,8 +25,8 @@ index.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:18
+* @see \App\Http\Controllers\Insights\SurveyController::index
+ * @see app/Http/Controllers/Insights/SurveyController.php:16
  * @route '/surveys'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,8 +34,8 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:18
+* @see \App\Http\Controllers\Insights\SurveyController::index
+ * @see app/Http/Controllers/Insights/SurveyController.php:16
  * @route '/surveys'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,8 +44,8 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:28
+* @see \App\Http\Controllers\Insights\SurveyController::show
+ * @see app/Http/Controllers/Insights/SurveyController.php:33
  * @route '/surveys/{slug}'
  */
 export const show = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -59,8 +59,8 @@ show.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:28
+* @see \App\Http\Controllers\Insights\SurveyController::show
+ * @see app/Http/Controllers/Insights/SurveyController.php:33
  * @route '/surveys/{slug}'
  */
 show.url = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -87,8 +87,8 @@ show.url = (args: { slug: string | number } | [slug: string | number ] | string 
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:28
+* @see \App\Http\Controllers\Insights\SurveyController::show
+ * @see app/Http/Controllers/Insights/SurveyController.php:33
  * @route '/surveys/{slug}'
  */
 show.get = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -96,8 +96,8 @@ show.get = (args: { slug: string | number } | [slug: string | number ] | string 
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:28
+* @see \App\Http\Controllers\Insights\SurveyController::show
+ * @see app/Http/Controllers/Insights/SurveyController.php:33
  * @route '/surveys/{slug}'
  */
 show.head = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({

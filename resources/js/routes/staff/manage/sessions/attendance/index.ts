@@ -4,7 +4,7 @@ import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefa
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:214
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-export const update = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -19,7 +19,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:214
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-update.url = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { liveSession: args }
     }
@@ -52,7 +52,7 @@ update.url = (args: { liveSession: string | number | { id: string | number } } |
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:214
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-update.put = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })

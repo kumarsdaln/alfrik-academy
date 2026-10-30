@@ -21,14 +21,14 @@ const notificationCount = computed(() => page.props.notifications?.unreadCount ?
 const darkMode = ref(false);
 
 onMounted(() => {
-  darkMode.value = localStorage.getItem('kanram-theme') === 'dark';
+  darkMode.value = localStorage.getItem('alfrik-theme') === 'dark';
   document.documentElement.classList.toggle('theme-dark', darkMode.value);
 });
 
 function toggleTheme() {
   darkMode.value = !darkMode.value;
   document.documentElement.classList.toggle('theme-dark', darkMode.value);
-  localStorage.setItem('kanram-theme', darkMode.value ? 'dark' : 'light');
+  localStorage.setItem('alfrik-theme', darkMode.value ? 'dark' : 'light');
 }
 
 const links = [
@@ -48,7 +48,7 @@ const scheduleHref = schedule().url;
 <template>
   <aside class="dash-sidebar">
     <div class="learning-sidebar-head">
-      <Link class="brand" :href="home().url"><BrandMark class="brand-mark" /><span>Kanram Academy</span></Link>
+      <Link class="brand" :href="home().url"><BrandMark class="brand-mark" /><span>Alfrik Academy</span></Link>
     </div>
     <Teleport to=".dash-top" defer>
       <div class="learning-panel-actions header-panel-actions" aria-label="Learning panel tools">

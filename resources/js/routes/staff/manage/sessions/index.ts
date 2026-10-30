@@ -39,7 +39,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:160
  * @route '/staff/manage/sessions/{liveSession}'
  */
-export const update = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const update = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })
@@ -54,7 +54,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:160
  * @route '/staff/manage/sessions/{liveSession}'
  */
-update.url = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { liveSession: args }
     }
@@ -87,7 +87,7 @@ update.url = (args: { liveSession: string | number | { id: string | number } } |
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:160
  * @route '/staff/manage/sessions/{liveSession}'
  */
-update.patch = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+update.patch = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })
@@ -97,7 +97,7 @@ update.patch = (args: { liveSession: string | number | { id: string | number } }
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:184
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-export const attendance = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const attendance = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: attendance.url(args, options),
     method: 'get',
 })
@@ -112,7 +112,7 @@ attendance.definition = {
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:184
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-attendance.url = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+attendance.url = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { liveSession: args }
     }
@@ -145,7 +145,7 @@ attendance.url = (args: { liveSession: string | number | { id: string | number }
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:184
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-attendance.get = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+attendance.get = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: attendance.url(args, options),
     method: 'get',
 })
@@ -154,7 +154,7 @@ attendance.get = (args: { liveSession: string | number | { id: string | number }
  * @see app/Http/Controllers/Staff/AdminOperationsController.php:184
  * @route '/staff/manage/sessions/{liveSession}/attendance'
  */
-attendance.head = (args: { liveSession: string | number | { id: string | number } } | [liveSession: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+attendance.head = (args: { liveSession: number | { id: number } } | [liveSession: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: attendance.url(args, options),
     method: 'head',
 })

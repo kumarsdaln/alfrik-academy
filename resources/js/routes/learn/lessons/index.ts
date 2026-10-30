@@ -1,10 +1,10 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-export const show = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const show = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
@@ -16,10 +16,10 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-show.url = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+show.url = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { lesson: args }
     }
@@ -49,29 +49,29 @@ show.url = (args: { lesson: string | number | { id: string | number } } | [lesso
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-show.get = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+show.get = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: show.url(args, options),
     method: 'get',
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:394
+ * @see app/Http/Controllers/StudentLearningController.php:744
  * @route '/learn/lessons/{lesson}'
  */
-show.head = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+show.head = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: show.url(args, options),
     method: 'head',
 })
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::complete
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-export const complete = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+export const complete = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: complete.url(args, options),
     method: 'post',
 })
@@ -83,10 +83,10 @@ complete.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::complete
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-complete.url = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+complete.url = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { lesson: args }
     }
@@ -116,10 +116,10 @@ complete.url = (args: { lesson: string | number | { id: string | number } } | [l
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::complete
- * @see app/Http/Controllers/StudentLearningController.php:423
+ * @see app/Http/Controllers/StudentLearningController.php:808
  * @route '/learn/lessons/{lesson}/complete'
  */
-complete.post = (args: { lesson: string | number | { id: string | number } } | [lesson: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+complete.post = (args: { lesson: number | { id: number } } | [lesson: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: complete.url(args, options),
     method: 'post',
 })

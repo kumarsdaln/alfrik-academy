@@ -20,7 +20,7 @@ const changePassword = () => form.put(updatePassword().url, { preserveScroll: tr
       </form>
       <aside class="profile-settings-aside">
         <section class="profile-settings-card profile-security-card"><span class="eyebrow">ACCOUNT EMAIL</span><h2>{{ security.emailVerified ? 'Verified and ready' : 'Verification pending' }}</h2><p>{{ security.email }}</p><span class="profile-email-status" :class="security.emailVerified ? 'is-verified' : 'is-pending'"><UiIcon :name="security.emailVerified ? 'check-circle' : 'help'" :size="15" />{{ security.emailVerified ? 'Email verified' : 'Needs verification' }}</span></section>
-        <section class="settings-security-tip"><UiIcon name="lock-keyhole" :size="19" /><div><b>Keep your account safe</b><p>Never share your password. Kanram staff will never ask you for it.</p></div></section>
+        <section class="settings-security-tip"><UiIcon name="lock-keyhole" :size="19" /><div><b>Keep your account safe</b><p>Never share your password. Alfrik staff will never ask you for it.</p></div></section>
       </aside>
     </section>
   </LearningSettingsLayout>

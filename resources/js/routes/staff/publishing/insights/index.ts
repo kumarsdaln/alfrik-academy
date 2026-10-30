@@ -1,10 +1,10 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-export const update = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -16,10 +16,10 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-update.url = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { insight: args }
     }
@@ -49,20 +49,20 @@ update.url = (args: { insight: string | number | { id: string | number } } | [in
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-update.put = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroy
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-export const destroy = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const destroy = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroy.url(args, options),
     method: 'delete',
 })
@@ -74,10 +74,10 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroy
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-destroy.url = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+destroy.url = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { insight: args }
     }
@@ -107,17 +107,17 @@ destroy.url = (args: { insight: string | number | { id: string | number } } | [i
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroy
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-destroy.delete = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+destroy.delete = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroy.url(args, options),
     method: 'delete',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -132,7 +132,7 @@ store.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 store.url = (options?: RouteQueryOptions) => {
@@ -141,7 +141,7 @@ store.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::store
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({

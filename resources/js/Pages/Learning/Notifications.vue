@@ -9,7 +9,7 @@ const save = () => form.put(updateNotifications().url, { preserveScroll: true })
 </script>
 
 <template>
-  <LearningSettingsLayout active="notifications" title="Notifications" description="Choose the in-app updates you want to see in your Kanram learning space." eyebrow="YOUR ACCOUNT SETTINGS · PREFERENCES">
+  <LearningSettingsLayout active="notifications" title="Notifications" description="Choose the in-app updates you want to see in your Alfrik learning space." eyebrow="YOUR ACCOUNT SETTINGS · PREFERENCES">
     <section class="settings-detail-grid settings-notifications-grid">
       <form class="profile-settings-card profile-notification-form settings-form-card" @submit.prevent="save">
         <div class="profile-settings-heading"><div><span class="eyebrow">IN-APP UPDATES</span><h2>What we’ll let you know about</h2></div><UiIcon name="bell" :size="20" /></div>

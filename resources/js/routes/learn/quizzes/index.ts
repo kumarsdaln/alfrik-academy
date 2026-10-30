@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 export const show = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 show.url = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -44,7 +44,7 @@ show.url = (args: { quizId: string | number } | [quizId: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 show.get = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -53,7 +53,7 @@ show.get = (args: { quizId: string | number } | [quizId: string | number ] | str
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::show
- * @see app/Http/Controllers/StudentLearningController.php:279
+ * @see app/Http/Controllers/StudentLearningController.php:490
  * @route '/learn/quizzes/{quizId}'
  */
 show.head = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -63,7 +63,7 @@ show.head = (args: { quizId: string | number } | [quizId: string | number ] | st
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submit
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 export const submit = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -78,7 +78,7 @@ submit.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submit
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 submit.url = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ submit.url = (args: { quizId: string | number } | [quizId: string | number ] | s
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::submit
- * @see app/Http/Controllers/StudentLearningController.php:331
+ * @see app/Http/Controllers/StudentLearningController.php:598
  * @route '/learn/quizzes/{quizId}'
  */
 submit.post = (args: { quizId: string | number } | [quizId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({

@@ -1,10 +1,10 @@
-# Kanram Academy platform review
+# Alfrik Academy platform review
 
 Review date: 22 October 2026
 
 ## Current product foundation
 
-Kanram is a live-first learning platform with public course discovery, course curriculum, student workspaces, cohort sessions, assignments, quizzes, grading, community publishing, job listings, events, and Stripe-backed checkout. The application uses Laravel 13, Inertia, Vue, Wayfinder, PostgreSQL, Redis-backed queues/cache/session defaults, and Cashier.
+Alfrik is a live-first learning platform with public course discovery, course curriculum, student workspaces, cohort sessions, assignments, quizzes, grading, community publishing, job listings, events, and Stripe-backed checkout. The application uses Laravel 13, Inertia, Vue, Wayfinder, PostgreSQL, Redis-backed queues/cache/session defaults, and Cashier.
 
 The management area has role bundles for administrators, teachers, social managers, and students. This review added route-level permission checks for management capabilities, permission-aware staff navigation, separate privileges for academy-wide assessments and cohorts, and applicant-data access. Administrators retain full access; teacher and publishing roles follow narrower capability grants.
 

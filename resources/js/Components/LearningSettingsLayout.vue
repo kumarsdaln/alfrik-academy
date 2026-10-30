@@ -16,7 +16,7 @@ const links = computed(() => [
 </script>
 
 <template>
-  <Head :title="`${title} — Kanram Academy`" />
+  <Head :title="`${title} — Alfrik Academy`" />
   <div class="dashboard-shell">
     <LearningSidebar active="profile" />
     <main class="dash-main">

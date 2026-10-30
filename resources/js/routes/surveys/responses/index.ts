@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
-* @see \App\Http\Controllers\DiscoveryController::store
- * @see app/Http/Controllers/DiscoveryController.php:33
+* @see \App\Http\Controllers\Insights\SurveyController::store
+ * @see app/Http/Controllers/Insights/SurveyController.php:78
  * @route '/surveys/{slug}/responses'
  */
 export const store = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -15,8 +15,8 @@ store.definition = {
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::store
- * @see app/Http/Controllers/DiscoveryController.php:33
+* @see \App\Http\Controllers\Insights\SurveyController::store
+ * @see app/Http/Controllers/Insights/SurveyController.php:78
  * @route '/surveys/{slug}/responses'
  */
 store.url = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -43,8 +43,8 @@ store.url = (args: { slug: string | number } | [slug: string | number ] | string
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::store
- * @see app/Http/Controllers/DiscoveryController.php:33
+* @see \App\Http\Controllers\Insights\SurveyController::store
+ * @see app/Http/Controllers/Insights/SurveyController.php:78
  * @route '/surveys/{slug}/responses'
  */
 store.post = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({

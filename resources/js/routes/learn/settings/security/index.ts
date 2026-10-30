@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 export const update = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -16,7 +16,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 update.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 update.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({

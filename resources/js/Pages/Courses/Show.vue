@@ -30,7 +30,7 @@ const questions = [
 
 onMounted(() => {
   try {
-    saved.value = JSON.parse(localStorage.getItem('kanram:saved-courses') ?? '[]').includes(props.course.slug);
+    saved.value = JSON.parse(localStorage.getItem('alfrik:saved-courses') ?? '[]').includes(props.course.slug);
   } catch {
     saved.value = false;
   }
@@ -38,9 +38,9 @@ onMounted(() => {
 
 watch(saved, (isSaved) => {
   try {
-    const courses = new Set(JSON.parse(localStorage.getItem('kanram:saved-courses') ?? '[]'));
+    const courses = new Set(JSON.parse(localStorage.getItem('alfrik:saved-courses') ?? '[]'));
     isSaved ? courses.add(props.course.slug) : courses.delete(props.course.slug);
-    localStorage.setItem('kanram:saved-courses', JSON.stringify([...courses]));
+    localStorage.setItem('alfrik:saved-courses', JSON.stringify([...courses]));
   } catch {
     // Saving is a convenience; the page remains usable if browser storage is unavailable.
   }

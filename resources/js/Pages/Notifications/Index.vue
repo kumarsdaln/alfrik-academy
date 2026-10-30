@@ -17,7 +17,7 @@ const isStaff = computed(() => (page.props.auth?.user?.roles || []).some((role) 
   <div v-else class="dashboard-shell">
     <LearningSidebar active="notifications" />
     <main class="dash-main">
-      <header class="dash-top"><span>Your Kanram account</span></header>
+      <header class="dash-top"><span>Your Alfrik account</span></header>
       <div class="dash-content notification-page-content"><NotificationInbox :notifications="notifications" :unread-count="unreadCount" :counts="counts" :active-filter="activeFilter" /></div>
     </main>
   </div>

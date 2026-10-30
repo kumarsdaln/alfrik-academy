@@ -6,7 +6,6 @@ import '../css/course-v4.css';
 import '../css/home-v3.css';
 import '../css/typography.css';
 import '../css/responsive.css';
-import '../css/academy-colors.css';
 import '../css/auth.css';
 import '../css/learning-panel.css';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -29,3 +28,4 @@ createInertiaApp({
         createApp({ render: () => h(App, props) }).use(plugin).component('UiIcon', UiIcon).component('BrandMark', BrandMark).mount(el);
     },
 });
+import '../css/academy-colors.css';

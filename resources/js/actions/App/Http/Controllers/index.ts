@@ -1,7 +1,9 @@
+import HomeController from './HomeController'
 import PublicController from './PublicController'
-import WebinarEventController from './WebinarEventController'
-import DiscoveryController from './DiscoveryController'
 import ContactController from './ContactController'
+import WebinarEventController from './WebinarEventController'
+import Insights from './Insights'
+import Careers from './Careers'
 import AuthController from './AuthController'
 import NotificationController from './NotificationController'
 import StudentProfileController from './StudentProfileController'
@@ -11,10 +13,12 @@ import StaffController from './StaffController'
 import Staff from './Staff'
 import StaffPublishingController from './StaffPublishingController'
 const Controllers = {
-    PublicController: Object.assign(PublicController, PublicController),
-WebinarEventController: Object.assign(WebinarEventController, WebinarEventController),
-DiscoveryController: Object.assign(DiscoveryController, DiscoveryController),
+    HomeController: Object.assign(HomeController, HomeController),
+PublicController: Object.assign(PublicController, PublicController),
 ContactController: Object.assign(ContactController, ContactController),
+WebinarEventController: Object.assign(WebinarEventController, WebinarEventController),
+Insights: Object.assign(Insights, Insights),
+Careers: Object.assign(Careers, Careers),
 AuthController: Object.assign(AuthController, AuthController),
 NotificationController: Object.assign(NotificationController, NotificationController),
 StudentProfileController: Object.assign(StudentProfileController, StudentProfileController),

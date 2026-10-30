@@ -47,5 +47,5 @@ async function share() {
 </template>
 
 <style scoped>
-.share-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 12px;border:1px solid #dfe2d9;border-radius:4px;background:#fff;color:#465a40;font:inherit;font-size:.74rem;font-weight:600;cursor:pointer;transition:border-color .15s,background .15s,color .15s}.share-button:hover{border-color:#aebaa6;background:#f4f6f1;color:#354532}.share-button:focus-visible{outline:3px solid #82977755;outline-offset:2px}.share-button-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.share-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 12px;border:1px solid #dfe2d9;border-radius:4px;background:var(--academy-surface);color:var(--academy-primary);font:inherit;font-size:.74rem;font-weight:600;cursor:pointer;transition:border-color .15s,background .15s,color .15s}.share-button:hover{border-color:var(--academy-muted);background:var(--academy-paper);color:var(--academy-primary)}.share-button:focus-visible{outline:3px solid #82977755;outline-offset:2px}.share-button-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 </style>

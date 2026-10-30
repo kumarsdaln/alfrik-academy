@@ -44,7 +44,7 @@ function apply() { form.post(wayfinderApply1.url({ slug: props.job.slug })); }
               <h2>About the opportunity</h2>
               <p>{{ job.description }}</p>
             </section>
-            <p class="job-disclaimer">Listings are shared by the Kanram community. Review the employer and role details before applying.</p>
+            <p class="job-disclaimer">Listings are shared by the Alfrik community. Review the employer and role details before applying.</p>
           </div>
 
           <aside class="job-apply-box">
@@ -83,45 +83,45 @@ function apply() { form.post(wayfinderApply1.url({ slug: props.job.slug })); }
 </template>
 
 <style scoped>
-.career-page{min-height:80vh;padding:38px 0 88px;background:var(--academy-paper,#faf9f6);color:var(--academy-ink,#252922)}
+.career-page{min-height:80vh;padding:38px 0 88px;background:var(--academy-paper,var(--academy-paper));color:var(--academy-ink,var(--academy-ink))}
 .job-detail{max-width:1120px}
-.back-link{display:inline-flex;align-items:center;gap:8px;margin:0 0 28px;color:#53674d;font-size:.88rem;text-decoration:none}
+.back-link{display:inline-flex;align-items:center;gap:8px;margin:0 0 28px;color:var(--academy-secondary);font-size:.88rem;text-decoration:none}
 .back-link:hover{text-decoration:underline;text-underline-offset:4px}
 .job-hero{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:start;gap:20px;padding:34px 0 36px;border-top:1px solid #e5e3dc;border-bottom:1px solid #e5e3dc}
-.job-company-mark{display:grid;place-items:center;width:62px;height:62px;background:#e8eee4;color:#43593d;font:500 1.55rem var(--serif)}
+.job-company-mark{display:grid;place-items:center;width:62px;height:62px;background:var(--academy-primary-soft);color:var(--academy-secondary);font:500 1.55rem var(--serif)}
 .job-heading-copy{min-width:0}
-.job-heading-copy .eyebrow{color:#626c5d}
-.job-heading-copy h1{margin:10px 0 12px;color:#252922;font:450 clamp(2.7rem,5.4vw,4.5rem)/1.02 var(--serif);letter-spacing:-.045em}
-.job-summary{max-width:760px;margin:0;color:#626a60;font-size:1.08rem;line-height:1.7}
+.job-heading-copy .eyebrow{color:var(--academy-muted)}
+.job-heading-copy h1{margin:10px 0 12px;color:var(--academy-ink);font:450 clamp(2.7rem,5.4vw,4.5rem)/1.02 var(--serif);letter-spacing:-.045em}
+.job-summary{max-width:760px;margin:0;color:var(--academy-muted);font-size:1.08rem;line-height:1.7}
 .job-hero :deep(.share-button),.job-hero :deep(button){align-self:start}
 .job-tags,.job-skill-list{display:flex;flex-wrap:wrap;gap:8px}
 .job-tags{margin-top:19px}
-.job-tags span,.job-skill-list span{padding:7px 10px;background:#eef1e9;color:#53644e;font-size:.8rem;text-transform:capitalize}
+.job-tags span,.job-skill-list span{padding:7px 10px;background:var(--academy-paper);color:var(--academy-secondary);font-size:.8rem;text-transform:capitalize}
 .job-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;align-items:start;gap:clamp(40px,7vw,96px);padding-top:38px}
 .job-content{min-width:0}
 .job-section{padding:0 0 32px;border-bottom:1px solid #e5e3dc}
 .job-section+.job-section{padding-top:30px}
-.job-section h2,.job-apply-box h2{margin:8px 0 14px;color:#282e26;font:450 1.85rem/1.2 var(--serif);letter-spacing:-.02em}
-.job-description p{margin:0;color:#50584f;font-size:1rem;line-height:1.85;white-space:pre-line}
+.job-section h2,.job-apply-box h2{margin:8px 0 14px;color:var(--academy-ink);font:450 1.85rem/1.2 var(--serif);letter-spacing:-.02em}
+.job-description p{margin:0;color:var(--academy-muted);font-size:1rem;line-height:1.85;white-space:pre-line}
 .job-skill-list{margin-top:18px}
-.job-skill-list span{background:#fff;border:1px solid #e2e5dc}
-.job-apply-box{position:sticky;top:24px;padding:25px;background:#fff;border:1px solid #e3e3da;border-top:3px solid #354532}
+.job-skill-list span{background:var(--academy-surface);border:1px solid #e2e5dc}
+.job-apply-box{position:sticky;top:24px;padding:25px;background:var(--academy-surface);border:1px solid #e3e3da;border-top:3px solid var(--academy-primary)}
 .job-apply-box h2{font-size:1.65rem}
-.job-apply-box p,.apply-note{display:block;margin:0 0 19px;color:#6b7268;font-size:.9rem;line-height:1.65}
+.job-apply-box p,.apply-note{display:block;margin:0 0 19px;color:var(--academy-muted);font-size:.9rem;line-height:1.65}
 .job-apply-box .button{display:flex;width:100%;min-height:48px;align-items:center;justify-content:center;gap:10px;text-align:center}
 .job-apply-box form{display:grid;gap:10px}
-.job-apply-box label{color:#454c43;font-size:.88rem;font-weight:600}
-.job-apply-box label span{color:#7d837a;font-weight:400}
-.job-apply-box textarea{width:100%;padding:12px;border:1px solid #dedfd7;border-radius:0;background:#fff;color:#30362f;font:400 .94rem/1.5 var(--sans);resize:vertical}
-.job-apply-box textarea:focus{outline:2px solid #d9e4d4;outline-offset:1px;border-color:#75896d}
+.job-apply-box label{color:var(--academy-ink);font-size:.88rem;font-weight:600}
+.job-apply-box label span{color:var(--academy-muted);font-weight:400}
+.job-apply-box textarea{width:100%;padding:12px;border:1px solid #dedfd7;border-radius:0;background:var(--academy-surface);color:var(--academy-ink);font:400 .94rem/1.5 var(--sans);resize:vertical}
+.job-apply-box textarea:focus{outline:2px solid var(--academy-secondary-light);outline-offset:1px;border-color:var(--academy-focus)}
 .job-apply-box form .button{margin-top:4px;cursor:pointer}
 .job-apply-box form .button:disabled{opacity:.6;cursor:wait}
 .job-salary{display:flex;flex-direction:column;gap:5px;margin-top:22px;padding-top:18px;border-top:1px solid #e9e8e1}
-.job-salary span{color:#757c72;font-size:.8rem}
-.job-salary strong{color:#344331;font-size:1rem;font-weight:600}
+.job-salary span{color:var(--academy-muted);font-size:.8rem}
+.job-salary strong{color:var(--academy-ink);font-size:1rem;font-weight:600}
 .apply-note{margin:12px 0 0;font-size:.78rem}
-.field-error{color:#a13c37;font-size:.8rem}
-.job-disclaimer{margin:20px 0 0;color:#7d837a;font-size:.8rem;line-height:1.6}
+.field-error{color:var(--academy-danger);font-size:.8rem}
+.job-disclaimer{margin:20px 0 0;color:var(--academy-muted);font-size:.8rem;line-height:1.6}
 @media(max-width:800px){.job-layout{grid-template-columns:minmax(0,1fr) 300px;gap:32px}.job-hero{grid-template-columns:54px minmax(0,1fr) auto;gap:15px}.job-company-mark{width:54px;height:54px}}
 @media(max-width:650px){.career-page{padding-top:24px}.job-detail{padding-left:20px;padding-right:20px}.back-link{margin-bottom:20px}.job-hero{grid-template-columns:46px minmax(0,1fr);gap:13px;padding:24px 0 26px}.job-company-mark{width:46px;height:46px}.job-heading-copy h1{font-size:clamp(2.4rem,10vw,3.5rem)}.job-summary{font-size:.98rem}.job-hero :deep(.share-button),.job-hero :deep(button){grid-column:2;grid-row:2}.job-layout{grid-template-columns:1fr;gap:26px;padding-top:28px}.job-apply-box{position:static;grid-row:1}.job-content{grid-row:2}.job-section h2{font-size:1.65rem}}
 </style>

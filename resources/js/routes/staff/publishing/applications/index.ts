@@ -1,10 +1,10 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-export const update = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const update = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })
@@ -16,10 +16,10 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-update.url = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { application: args }
     }
@@ -49,10 +49,10 @@ update.url = (args: { application: string | number | { id: string | number } } |
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::update
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-update.patch = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+update.patch = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: update.url(args, options),
     method: 'patch',
 })

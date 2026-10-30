@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffController::show
- * @see app/Http/Controllers/StaffController.php:172
+ * @see app/Http/Controllers/StaffController.php:394
  * @route '/staff/reviews/{submissionId}'
  */
 export const show = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffController::show
- * @see app/Http/Controllers/StaffController.php:172
+ * @see app/Http/Controllers/StaffController.php:394
  * @route '/staff/reviews/{submissionId}'
  */
 show.url = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -44,7 +44,7 @@ show.url = (args: { submissionId: string | number } | [submissionId: string | nu
 
 /**
 * @see \App\Http\Controllers\StaffController::show
- * @see app/Http/Controllers/StaffController.php:172
+ * @see app/Http/Controllers/StaffController.php:394
  * @route '/staff/reviews/{submissionId}'
  */
 show.get = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -53,7 +53,7 @@ show.get = (args: { submissionId: string | number } | [submissionId: string | nu
 })
 /**
 * @see \App\Http\Controllers\StaffController::show
- * @see app/Http/Controllers/StaffController.php:172
+ * @see app/Http/Controllers/StaffController.php:394
  * @route '/staff/reviews/{submissionId}'
  */
 show.head = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -63,7 +63,7 @@ show.head = (args: { submissionId: string | number } | [submissionId: string | n
 
 /**
 * @see \App\Http\Controllers\StaffController::grade
- * @see app/Http/Controllers/StaffController.php:189
+ * @see app/Http/Controllers/StaffController.php:418
  * @route '/staff/reviews/{submissionId}'
  */
 export const grade = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -78,7 +78,7 @@ grade.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffController::grade
- * @see app/Http/Controllers/StaffController.php:189
+ * @see app/Http/Controllers/StaffController.php:418
  * @route '/staff/reviews/{submissionId}'
  */
 grade.url = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ grade.url = (args: { submissionId: string | number } | [submissionId: string | n
 
 /**
 * @see \App\Http\Controllers\StaffController::grade
- * @see app/Http/Controllers/StaffController.php:189
+ * @see app/Http/Controllers/StaffController.php:418
  * @route '/staff/reviews/{submissionId}'
  */
 grade.post = (args: { submissionId: string | number } | [submissionId: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({

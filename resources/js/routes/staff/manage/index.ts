@@ -488,7 +488,7 @@ inquiries.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 export const surveys = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -503,7 +503,7 @@ surveys.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.url = (options?: RouteQueryOptions) => {
@@ -512,7 +512,7 @@ surveys.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -521,7 +521,7 @@ surveys.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -531,7 +531,7 @@ surveys.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 export const reports = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -546,7 +546,7 @@ reports.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.url = (options?: RouteQueryOptions) => {
@@ -555,7 +555,7 @@ reports.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -564,7 +564,7 @@ reports.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

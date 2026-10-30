@@ -48,7 +48,7 @@ gradebook.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::publishing
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 export const publishing = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -63,7 +63,7 @@ publishing.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::publishing
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 publishing.url = (options?: RouteQueryOptions) => {
@@ -72,7 +72,7 @@ publishing.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::publishing
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 publishing.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -81,7 +81,7 @@ publishing.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::publishing
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 publishing.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -91,7 +91,7 @@ publishing.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffController::reviews
- * @see app/Http/Controllers/StaffController.php:156
+ * @see app/Http/Controllers/StaffController.php:369
  * @route '/staff/reviews'
  */
 export const reviews = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -106,7 +106,7 @@ reviews.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffController::reviews
- * @see app/Http/Controllers/StaffController.php:156
+ * @see app/Http/Controllers/StaffController.php:369
  * @route '/staff/reviews'
  */
 reviews.url = (options?: RouteQueryOptions) => {
@@ -115,7 +115,7 @@ reviews.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffController::reviews
- * @see app/Http/Controllers/StaffController.php:156
+ * @see app/Http/Controllers/StaffController.php:369
  * @route '/staff/reviews'
  */
 reviews.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -124,7 +124,7 @@ reviews.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffController::reviews
- * @see app/Http/Controllers/StaffController.php:156
+ * @see app/Http/Controllers/StaffController.php:369
  * @route '/staff/reviews'
  */
 reviews.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

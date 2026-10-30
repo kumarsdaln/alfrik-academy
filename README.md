@@ -1,4 +1,4 @@
-# Kanram Academy — live-first learning and community platform
+# Alfrik Academy — live-first learning and community platform
 
 Initial product scaffold for a learning platform centered on instructor-led cohorts, with supplemental video lessons and assessments.
 

@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StaffPublishingController::index
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ index.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::index
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ index.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::index
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::index
- * @see app/Http/Controllers/StaffPublishingController.php:18
+ * @see app/Http/Controllers/StaffPublishingController.php:20
  * @route '/staff/publishing'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 export const surveys = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -59,7 +59,7 @@ surveys.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ surveys.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -77,7 +77,7 @@ surveys.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::surveys
- * @see app/Http/Controllers/StaffPublishingController.php:37
+ * @see app/Http/Controllers/StaffPublishingController.php:66
  * @route '/staff/manage/surveys'
  */
 surveys.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -87,7 +87,7 @@ surveys.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 export const reports = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -102,7 +102,7 @@ reports.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.url = (options?: RouteQueryOptions) => {
@@ -111,7 +111,7 @@ reports.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -120,7 +120,7 @@ reports.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffPublishingController::reports
- * @see app/Http/Controllers/StaffPublishingController.php:42
+ * @see app/Http/Controllers/StaffPublishingController.php:71
  * @route '/staff/manage/reports'
  */
 reports.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -130,10 +130,10 @@ reports.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateInsight
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-export const updateInsight = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const updateInsight = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: updateInsight.url(args, options),
     method: 'put',
 })
@@ -145,10 +145,10 @@ updateInsight.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateInsight
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-updateInsight.url = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+updateInsight.url = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { insight: args }
     }
@@ -178,20 +178,20 @@ updateInsight.url = (args: { insight: string | number | { id: string | number } 
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateInsight
- * @see app/Http/Controllers/StaffPublishingController.php:144
+ * @see app/Http/Controllers/StaffPublishingController.php:310
  * @route '/staff/publishing/insights/{insight}'
  */
-updateInsight.put = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+updateInsight.put = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: updateInsight.url(args, options),
     method: 'put',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroyInsight
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-export const destroyInsight = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const destroyInsight = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyInsight.url(args, options),
     method: 'delete',
 })
@@ -203,10 +203,10 @@ destroyInsight.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroyInsight
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-destroyInsight.url = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+destroyInsight.url = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { insight: args }
     }
@@ -236,20 +236,20 @@ destroyInsight.url = (args: { insight: string | number | { id: string | number }
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::destroyInsight
- * @see app/Http/Controllers/StaffPublishingController.php:178
+ * @see app/Http/Controllers/StaffPublishingController.php:409
  * @route '/staff/publishing/insights/{insight}'
  */
-destroyInsight.delete = (args: { insight: string | number | { id: string | number } } | [insight: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+destroyInsight.delete = (args: { insight: number | { id: number } } | [insight: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyInsight.url(args, options),
     method: 'delete',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateJob
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-export const updateJob = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const updateJob = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: updateJob.url(args, options),
     method: 'put',
 })
@@ -261,10 +261,10 @@ updateJob.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateJob
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-updateJob.url = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+updateJob.url = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { jobPost: args }
     }
@@ -294,20 +294,20 @@ updateJob.url = (args: { jobPost: string | number | { id: string | number } } | 
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateJob
- * @see app/Http/Controllers/StaffPublishingController.php:186
+ * @see app/Http/Controllers/StaffPublishingController.php:424
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-updateJob.put = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+updateJob.put = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: updateJob.url(args, options),
     method: 'put',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::closeJob
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-export const closeJob = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const closeJob = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: closeJob.url(args, options),
     method: 'delete',
 })
@@ -319,10 +319,10 @@ closeJob.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::closeJob
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-closeJob.url = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+closeJob.url = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { jobPost: args }
     }
@@ -352,17 +352,17 @@ closeJob.url = (args: { jobPost: string | number | { id: string | number } } | [
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::closeJob
- * @see app/Http/Controllers/StaffPublishingController.php:205
+ * @see app/Http/Controllers/StaffPublishingController.php:482
  * @route '/staff/publishing/jobs/{jobPost}'
  */
-closeJob.delete = (args: { jobPost: string | number | { id: string | number } } | [jobPost: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+closeJob.delete = (args: { jobPost: number | { id: number } } | [jobPost: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: closeJob.url(args, options),
     method: 'delete',
 })
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeInsight
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 export const storeInsight = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -377,7 +377,7 @@ storeInsight.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeInsight
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 storeInsight.url = (options?: RouteQueryOptions) => {
@@ -386,7 +386,7 @@ storeInsight.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeInsight
- * @see app/Http/Controllers/StaffPublishingController.php:83
+ * @see app/Http/Controllers/StaffPublishingController.php:153
  * @route '/staff/publishing/insights'
  */
 storeInsight.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -396,7 +396,7 @@ storeInsight.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeJob
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 export const storeJob = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -411,7 +411,7 @@ storeJob.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeJob
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 storeJob.url = (options?: RouteQueryOptions) => {
@@ -420,7 +420,7 @@ storeJob.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::storeJob
- * @see app/Http/Controllers/StaffPublishingController.php:114
+ * @see app/Http/Controllers/StaffPublishingController.php:238
  * @route '/staff/publishing/jobs'
  */
 storeJob.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -430,10 +430,10 @@ storeJob.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateApplication
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-export const updateApplication = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+export const updateApplication = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: updateApplication.url(args, options),
     method: 'patch',
 })
@@ -445,10 +445,10 @@ updateApplication.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateApplication
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-updateApplication.url = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+updateApplication.url = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { application: args }
     }
@@ -478,10 +478,10 @@ updateApplication.url = (args: { application: string | number | { id: string | n
 
 /**
 * @see \App\Http\Controllers\StaffPublishingController::updateApplication
- * @see app/Http/Controllers/StaffPublishingController.php:135
+ * @see app/Http/Controllers/StaffPublishingController.php:286
  * @route '/staff/publishing/applications/{application}'
  */
-updateApplication.patch = (args: { application: string | number | { id: string | number } } | [application: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
+updateApplication.patch = (args: { application: number | { id: number } } | [application: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
     url: updateApplication.url(args, options),
     method: 'patch',
 })

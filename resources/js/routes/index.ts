@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../wayfinder'
 /**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
+* @see \App\Http\Controllers\HomeController::home
+ * @see app/Http/Controllers/HomeController.php:17
  * @route '/'
  */
 export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -15,8 +15,8 @@ home.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
+* @see \App\Http\Controllers\HomeController::home
+ * @see app/Http/Controllers/HomeController.php:17
  * @route '/'
  */
 home.url = (options?: RouteQueryOptions) => {
@@ -24,8 +24,8 @@ home.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
+* @see \App\Http\Controllers\HomeController::home
+ * @see app/Http/Controllers/HomeController.php:17
  * @route '/'
  */
 home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -33,8 +33,8 @@ home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
+* @see \App\Http\Controllers\HomeController::home
+ * @see app/Http/Controllers/HomeController.php:17
  * @route '/'
  */
 home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -216,7 +216,7 @@ contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\AuthController::login
- * @see app/Http/Controllers/AuthController.php:22
+ * @see app/Http/Controllers/AuthController.php:25
  * @route '/login'
  */
 export const login = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -231,7 +231,7 @@ login.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::login
- * @see app/Http/Controllers/AuthController.php:22
+ * @see app/Http/Controllers/AuthController.php:25
  * @route '/login'
  */
 login.url = (options?: RouteQueryOptions) => {
@@ -240,7 +240,7 @@ login.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::login
- * @see app/Http/Controllers/AuthController.php:22
+ * @see app/Http/Controllers/AuthController.php:25
  * @route '/login'
  */
 login.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -249,7 +249,7 @@ login.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\AuthController::login
- * @see app/Http/Controllers/AuthController.php:22
+ * @see app/Http/Controllers/AuthController.php:25
  * @route '/login'
  */
 login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -259,7 +259,7 @@ login.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\AuthController::register
- * @see app/Http/Controllers/AuthController.php:29
+ * @see app/Http/Controllers/AuthController.php:32
  * @route '/register'
  */
 export const register = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -274,7 +274,7 @@ register.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::register
- * @see app/Http/Controllers/AuthController.php:29
+ * @see app/Http/Controllers/AuthController.php:32
  * @route '/register'
  */
 register.url = (options?: RouteQueryOptions) => {
@@ -283,7 +283,7 @@ register.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::register
- * @see app/Http/Controllers/AuthController.php:29
+ * @see app/Http/Controllers/AuthController.php:32
  * @route '/register'
  */
 register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -292,7 +292,7 @@ register.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\AuthController::register
- * @see app/Http/Controllers/AuthController.php:29
+ * @see app/Http/Controllers/AuthController.php:32
  * @route '/register'
  */
 register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -302,7 +302,7 @@ register.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\AuthController::logout
- * @see app/Http/Controllers/AuthController.php:149
+ * @see app/Http/Controllers/AuthController.php:233
  * @route '/logout'
  */
 export const logout = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -317,7 +317,7 @@ logout.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::logout
- * @see app/Http/Controllers/AuthController.php:149
+ * @see app/Http/Controllers/AuthController.php:233
  * @route '/logout'
  */
 logout.url = (options?: RouteQueryOptions) => {
@@ -326,7 +326,7 @@ logout.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::logout
- * @see app/Http/Controllers/AuthController.php:149
+ * @see app/Http/Controllers/AuthController.php:233
  * @route '/logout'
  */
 logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -336,7 +336,7 @@ logout.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::learn
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 export const learn = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -351,7 +351,7 @@ learn.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::learn
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 learn.url = (options?: RouteQueryOptions) => {
@@ -360,7 +360,7 @@ learn.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentLearningController::learn
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 learn.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -369,7 +369,7 @@ learn.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentLearningController::learn
- * @see app/Http/Controllers/StudentLearningController.php:21
+ * @see app/Http/Controllers/StudentLearningController.php:23
  * @route '/learn'
  */
 learn.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -379,7 +379,7 @@ learn.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StaffController::staff
- * @see app/Http/Controllers/StaffController.php:89
+ * @see app/Http/Controllers/StaffController.php:217
  * @route '/staff'
  */
 export const staff = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -394,7 +394,7 @@ staff.definition = {
 
 /**
 * @see \App\Http\Controllers\StaffController::staff
- * @see app/Http/Controllers/StaffController.php:89
+ * @see app/Http/Controllers/StaffController.php:217
  * @route '/staff'
  */
 staff.url = (options?: RouteQueryOptions) => {
@@ -403,7 +403,7 @@ staff.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StaffController::staff
- * @see app/Http/Controllers/StaffController.php:89
+ * @see app/Http/Controllers/StaffController.php:217
  * @route '/staff'
  */
 staff.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -412,7 +412,7 @@ staff.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StaffController::staff
- * @see app/Http/Controllers/StaffController.php:89
+ * @see app/Http/Controllers/StaffController.php:217
  * @route '/staff'
  */
 staff.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({

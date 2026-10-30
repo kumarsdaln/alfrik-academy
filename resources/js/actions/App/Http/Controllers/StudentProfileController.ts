@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentProfileController::show
- * @see app/Http/Controllers/StudentProfileController.php:21
+ * @see app/Http/Controllers/StudentProfileController.php:22
  * @route '/learn/profile'
  */
 export const show = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ show.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::show
- * @see app/Http/Controllers/StudentProfileController.php:21
+ * @see app/Http/Controllers/StudentProfileController.php:22
  * @route '/learn/profile'
  */
 show.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ show.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::show
- * @see app/Http/Controllers/StudentProfileController.php:21
+ * @see app/Http/Controllers/StudentProfileController.php:22
  * @route '/learn/profile'
  */
 show.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ show.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::show
- * @see app/Http/Controllers/StudentProfileController.php:21
+ * @see app/Http/Controllers/StudentProfileController.php:22
  * @route '/learn/profile'
  */
 show.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ show.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:62
+ * @see app/Http/Controllers/StudentProfileController.php:77
  * @route '/learn/profile'
  */
 export const update = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -59,7 +59,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:62
+ * @see app/Http/Controllers/StudentProfileController.php:77
  * @route '/learn/profile'
  */
 update.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::update
- * @see app/Http/Controllers/StudentProfileController.php:62
+ * @see app/Http/Controllers/StudentProfileController.php:77
  * @route '/learn/profile'
  */
 update.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -78,7 +78,7 @@ update.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::learningPreferences
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 export const learningPreferences = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -93,7 +93,7 @@ learningPreferences.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::learningPreferences
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learningPreferences.url = (options?: RouteQueryOptions) => {
@@ -102,7 +102,7 @@ learningPreferences.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::learningPreferences
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learningPreferences.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -111,7 +111,7 @@ learningPreferences.get = (options?: RouteQueryOptions): RouteDefinition<'get'> 
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::learningPreferences
- * @see app/Http/Controllers/StudentProfileController.php:35
+ * @see app/Http/Controllers/StudentProfileController.php:36
  * @route '/learn/settings/learning'
  */
 learningPreferences.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -121,7 +121,7 @@ learningPreferences.head = (options?: RouteQueryOptions): RouteDefinition<'head'
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePreferences
- * @see app/Http/Controllers/StudentProfileController.php:74
+ * @see app/Http/Controllers/StudentProfileController.php:97
  * @route '/learn/settings/learning'
  */
 export const updatePreferences = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -136,7 +136,7 @@ updatePreferences.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePreferences
- * @see app/Http/Controllers/StudentProfileController.php:74
+ * @see app/Http/Controllers/StudentProfileController.php:97
  * @route '/learn/settings/learning'
  */
 updatePreferences.url = (options?: RouteQueryOptions) => {
@@ -145,7 +145,7 @@ updatePreferences.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePreferences
- * @see app/Http/Controllers/StudentProfileController.php:74
+ * @see app/Http/Controllers/StudentProfileController.php:97
  * @route '/learn/settings/learning'
  */
 updatePreferences.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -155,7 +155,7 @@ updatePreferences.put = (options?: RouteQueryOptions): RouteDefinition<'put'> =>
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 export const notifications = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -170,7 +170,7 @@ notifications.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.url = (options?: RouteQueryOptions) => {
@@ -179,7 +179,7 @@ notifications.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -188,7 +188,7 @@ notifications.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::notifications
- * @see app/Http/Controllers/StudentProfileController.php:45
+ * @see app/Http/Controllers/StudentProfileController.php:46
  * @route '/learn/settings/notifications'
  */
 notifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -198,7 +198,7 @@ notifications.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => (
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updateNotifications
- * @see app/Http/Controllers/StudentProfileController.php:82
+ * @see app/Http/Controllers/StudentProfileController.php:111
  * @route '/learn/settings/notifications'
  */
 export const updateNotifications = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -213,7 +213,7 @@ updateNotifications.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updateNotifications
- * @see app/Http/Controllers/StudentProfileController.php:82
+ * @see app/Http/Controllers/StudentProfileController.php:111
  * @route '/learn/settings/notifications'
  */
 updateNotifications.url = (options?: RouteQueryOptions) => {
@@ -222,7 +222,7 @@ updateNotifications.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updateNotifications
- * @see app/Http/Controllers/StudentProfileController.php:82
+ * @see app/Http/Controllers/StudentProfileController.php:111
  * @route '/learn/settings/notifications'
  */
 updateNotifications.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -232,7 +232,7 @@ updateNotifications.put = (options?: RouteQueryOptions): RouteDefinition<'put'> 
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 export const security = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -247,7 +247,7 @@ security.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.url = (options?: RouteQueryOptions) => {
@@ -256,7 +256,7 @@ security.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -265,7 +265,7 @@ security.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentProfileController::security
- * @see app/Http/Controllers/StudentProfileController.php:52
+ * @see app/Http/Controllers/StudentProfileController.php:65
  * @route '/learn/settings/security'
  */
 security.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -275,7 +275,7 @@ security.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePassword
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 export const updatePassword = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -290,7 +290,7 @@ updatePassword.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePassword
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 updatePassword.url = (options?: RouteQueryOptions) => {
@@ -299,7 +299,7 @@ updatePassword.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentProfileController::updatePassword
- * @see app/Http/Controllers/StudentProfileController.php:97
+ * @see app/Http/Controllers/StudentProfileController.php:152
  * @route '/learn/settings/security'
  */
 updatePassword.put = (options?: RouteQueryOptions): RouteDefinition<'put'> => ({

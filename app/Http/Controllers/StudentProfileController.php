@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -44,17 +45,31 @@ class StudentProfileController extends Controller
 
     public function notifications(Request $request): Response
     {
+        $storedPreferences = $request->user()->notification_preferences ?? [];
+
+        if (! is_array($storedPreferences)) {
+            $storedPreferences = [];
+        }
+
         return Inertia::render('Learning/Notifications', [
-            'preferences' => array_merge(self::DEFAULT_NOTIFICATION_PREFERENCES, $request->user()->notification_preferences ?? []),
+            'preferences' => array_merge(
+                self::DEFAULT_NOTIFICATION_PREFERENCES,
+                array_intersect_key(
+                    $storedPreferences,
+                    self::DEFAULT_NOTIFICATION_PREFERENCES
+                )
+            ),
         ]);
     }
 
     public function security(Request $request): Response
     {
+        $user = $request->user();
+
         return Inertia::render('Learning/Security', [
             'security' => [
-                'email' => $request->user()->email,
-                'emailVerified' => $request->user()->hasVerifiedEmail(),
+                'email' => $user->email,
+                'emailVerified' => $user->hasVerifiedEmail(),
             ],
         ]);
     }
@@ -66,51 +81,110 @@ class StudentProfileController extends Controller
             'bio' => ['nullable', 'string', 'max:500'],
         ]);
 
+        $validated['name'] = trim($validated['name']);
+        $validated['bio'] = isset($validated['bio'])
+            ? trim($validated['bio'])
+            : null;
+
         $request->user()->update($validated);
 
-        return back()->with('success', 'Your profile has been updated.');
+        return back()->with(
+            'success',
+            'Your profile has been updated.'
+        );
     }
 
     public function updatePreferences(Request $request): RedirectResponse
     {
-        $validated = $request->validate(['timezone' => ['required', 'timezone']]);
+        $validated = $request->validate([
+            'timezone' => ['required', 'string', 'timezone'],
+        ]);
+
         $request->user()->update($validated);
 
-        return back()->with('success', 'Your learning preferences have been saved.');
+        return back()->with(
+            'success',
+            'Your learning preferences have been saved.'
+        );
     }
 
     public function updateNotifications(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-            'preferences' => ['required', 'array'],
-            'preferences.class_reminders' => ['required', 'boolean'],
-            'preferences.assignment_feedback' => ['required', 'boolean'],
-            'preferences.event_updates' => ['required', 'boolean'],
-            'preferences.academy_updates' => ['required', 'boolean'],
+            'preferences' => [
+                'required',
+                'array:class_reminders,assignment_feedback,event_updates,academy_updates',
+            ],
+            'preferences.class_reminders' => [
+                'required',
+                'boolean',
+            ],
+            'preferences.assignment_feedback' => [
+                'required',
+                'boolean',
+            ],
+            'preferences.event_updates' => [
+                'required',
+                'boolean',
+            ],
+            'preferences.academy_updates' => [
+                'required',
+                'boolean',
+            ],
         ]);
 
-        $request->user()->update(['notification_preferences' => $validated['preferences']]);
+        $preferences = [];
 
-        return back()->with('success', 'Your notification preferences have been saved.');
+        foreach (self::DEFAULT_NOTIFICATION_PREFERENCES as $key => $default) {
+            $preferences[$key] = (bool) $validated['preferences'][$key];
+        }
+
+        $request->user()->update([
+            'notification_preferences' => $preferences,
+        ]);
+
+        return back()->with(
+            'success',
+            'Your notification preferences have been saved.'
+        );
     }
 
     public function updatePassword(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'current_password' => ['required', 'current_password'],
-            'password' => ['required', 'confirmed', Password::min(12)->letters()->mixedCase()->numbers()],
+            'password' => [
+                'required',
+                'confirmed',
+                'different:current_password',
+                Password::min(12)
+                    ->letters()
+                    ->mixedCase()
+                    ->numbers(),
+            ],
         ]);
 
-        $request->user()->update(['password' => $validated['password']]);
+        $request->user()->update([
+            'password' => Hash::make($validated['password']),
+        ]);
 
-        return back()->with('success', 'Your password has been changed.');
+        return back()->with(
+            'success',
+            'Your password has been changed.'
+        );
     }
 
     private function activeCourses(User $user)
     {
-        return $user->enrollments()->where('status', 'active')->with('course:id,title,slug')->get()
-            ->filter(fn ($enrollment) => $enrollment->course)
-            ->map(fn ($enrollment) => ['title' => $enrollment->course->title, 'slug' => $enrollment->course->slug])
+        return $user->enrollments()
+            ->where('status', 'active')
+            ->with('course:id,title,slug')
+            ->get()
+            ->filter(fn ($enrollment) => $enrollment->course !== null)
+            ->map(fn ($enrollment) => [
+                'title' => $enrollment->course->title,
+                'slug' => $enrollment->course->slug,
+            ])
             ->values();
     }
 }

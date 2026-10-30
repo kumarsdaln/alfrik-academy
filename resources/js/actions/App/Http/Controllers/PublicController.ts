@@ -1,48 +1,5 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../../../wayfinder'
 /**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
- * @route '/'
- */
-export const home = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: home.url(options),
-    method: 'get',
-})
-
-home.definition = {
-    methods: ["get","head"],
-    url: '/',
-} satisfies RouteDefinition<["get","head"]>
-
-/**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
- * @route '/'
- */
-home.url = (options?: RouteQueryOptions) => {
-    return home.definition.url + queryParams(options)
-}
-
-/**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
- * @route '/'
- */
-home.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
-    url: home.url(options),
-    method: 'get',
-})
-/**
-* @see \App\Http\Controllers\PublicController::home
- * @see app/Http/Controllers/PublicController.php:22
- * @route '/'
- */
-home.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
-    url: home.url(options),
-    method: 'head',
-})
-
-/**
 * @see \App\Http\Controllers\PublicController::courses
  * @see app/Http/Controllers/PublicController.php:93
  * @route '/courses'
@@ -528,6 +485,6 @@ contact.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: contact.url(options),
     method: 'head',
 })
-const PublicController = { home, courses, course, howItWorks, mentors, mentor, stories, story, about, faq, contact }
+const PublicController = { courses, course, howItWorks, mentors, mentor, stories, story, about, faq, contact }
 
 export default PublicController

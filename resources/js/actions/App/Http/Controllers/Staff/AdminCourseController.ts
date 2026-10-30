@@ -81,7 +81,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
  * @see app/Http/Controllers/Staff/AdminCourseController.php:76
  * @route '/staff/manage/courses/{course}'
  */
-export const edit = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+export const edit = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: edit.url(args, options),
     method: 'get',
 })
@@ -96,7 +96,7 @@ edit.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:76
  * @route '/staff/manage/courses/{course}'
  */
-edit.url = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+edit.url = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { course: args }
     }
@@ -129,7 +129,7 @@ edit.url = (args: { course: string | number | { id: string | number } } | [cours
  * @see app/Http/Controllers/Staff/AdminCourseController.php:76
  * @route '/staff/manage/courses/{course}'
  */
-edit.get = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
+edit.get = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     url: edit.url(args, options),
     method: 'get',
 })
@@ -138,7 +138,7 @@ edit.get = (args: { course: string | number | { id: string | number } } | [cours
  * @see app/Http/Controllers/Staff/AdminCourseController.php:76
  * @route '/staff/manage/courses/{course}'
  */
-edit.head = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
+edit.head = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
     url: edit.url(args, options),
     method: 'head',
 })
@@ -148,7 +148,7 @@ edit.head = (args: { course: string | number | { id: string | number } } | [cour
  * @see app/Http/Controllers/Staff/AdminCourseController.php:56
  * @route '/staff/manage/courses/{course}'
  */
-export const update = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+export const update = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -163,7 +163,7 @@ update.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:56
  * @route '/staff/manage/courses/{course}'
  */
-update.url = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+update.url = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { course: args }
     }
@@ -196,7 +196,7 @@ update.url = (args: { course: string | number | { id: string | number } } | [cou
  * @see app/Http/Controllers/Staff/AdminCourseController.php:56
  * @route '/staff/manage/courses/{course}'
  */
-update.put = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
+update.put = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
     url: update.url(args, options),
     method: 'put',
 })
@@ -240,7 +240,7 @@ storeCategory.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => (
  * @see app/Http/Controllers/Staff/AdminCourseController.php:87
  * @route '/staff/manage/courses/{course}/modules'
  */
-export const storeModule = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+export const storeModule = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: storeModule.url(args, options),
     method: 'post',
 })
@@ -255,7 +255,7 @@ storeModule.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:87
  * @route '/staff/manage/courses/{course}/modules'
  */
-storeModule.url = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions) => {
+storeModule.url = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
     if (typeof args === 'string' || typeof args === 'number') {
         args = { course: args }
     }
@@ -288,7 +288,7 @@ storeModule.url = (args: { course: string | number | { id: string | number } } |
  * @see app/Http/Controllers/Staff/AdminCourseController.php:87
  * @route '/staff/manage/courses/{course}/modules'
  */
-storeModule.post = (args: { course: string | number | { id: string | number } } | [course: string | number | { id: string | number } ] | string | number | { id: string | number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+storeModule.post = (args: { course: number | { id: number } } | [course: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: storeModule.url(args, options),
     method: 'post',
 })
@@ -298,7 +298,7 @@ storeModule.post = (args: { course: string | number | { id: string | number } } 
  * @see app/Http/Controllers/Staff/AdminCourseController.php:113
  * @route '/staff/manage/courses/{course}/modules/{module}'
  */
-export const destroyModule = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const destroyModule = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyModule.url(args, options),
     method: 'delete',
 })
@@ -313,7 +313,7 @@ destroyModule.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:113
  * @route '/staff/manage/courses/{course}/modules/{module}'
  */
-destroyModule.url = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions) => {
+destroyModule.url = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions) => {
     if (Array.isArray(args)) {
         args = {
                     course: args[0],
@@ -343,7 +343,7 @@ destroyModule.url = (args: { course: string | number | { id: string | number }, 
  * @see app/Http/Controllers/Staff/AdminCourseController.php:113
  * @route '/staff/manage/courses/{course}/modules/{module}'
  */
-destroyModule.delete = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+destroyModule.delete = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyModule.url(args, options),
     method: 'delete',
 })
@@ -353,7 +353,7 @@ destroyModule.delete = (args: { course: string | number | { id: string | number 
  * @see app/Http/Controllers/Staff/AdminCourseController.php:96
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons'
  */
-export const storeLesson = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+export const storeLesson = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: storeLesson.url(args, options),
     method: 'post',
 })
@@ -368,7 +368,7 @@ storeLesson.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:96
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons'
  */
-storeLesson.url = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions) => {
+storeLesson.url = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions) => {
     if (Array.isArray(args)) {
         args = {
                     course: args[0],
@@ -398,7 +398,7 @@ storeLesson.url = (args: { course: string | number | { id: string | number }, mo
  * @see app/Http/Controllers/Staff/AdminCourseController.php:96
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons'
  */
-storeLesson.post = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+storeLesson.post = (args: { course: number | { id: number }, module: number | { id: number } } | [course: number | { id: number }, module: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'post'> => ({
     url: storeLesson.url(args, options),
     method: 'post',
 })
@@ -408,7 +408,7 @@ storeLesson.post = (args: { course: string | number | { id: string | number }, m
  * @see app/Http/Controllers/Staff/AdminCourseController.php:121
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons/{lesson}'
  */
-export const destroyLesson = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+export const destroyLesson = (args: { course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } } | [course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyLesson.url(args, options),
     method: 'delete',
 })
@@ -423,7 +423,7 @@ destroyLesson.definition = {
  * @see app/Http/Controllers/Staff/AdminCourseController.php:121
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons/{lesson}'
  */
-destroyLesson.url = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } ], options?: RouteQueryOptions) => {
+destroyLesson.url = (args: { course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } } | [course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } ], options?: RouteQueryOptions) => {
     if (Array.isArray(args)) {
         args = {
                     course: args[0],
@@ -458,7 +458,7 @@ destroyLesson.url = (args: { course: string | number | { id: string | number }, 
  * @see app/Http/Controllers/Staff/AdminCourseController.php:121
  * @route '/staff/manage/courses/{course}/modules/{module}/lessons/{lesson}'
  */
-destroyLesson.delete = (args: { course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } } | [course: string | number | { id: string | number }, module: string | number | { id: string | number }, lesson: string | number | { id: string | number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
+destroyLesson.delete = (args: { course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } } | [course: number | { id: number }, module: number | { id: number }, lesson: number | { id: number } ], options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
     url: destroyLesson.url(args, options),
     method: 'delete',
 })

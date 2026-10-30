@@ -1,5 +1,31 @@
 <script setup>
-import { courses as wayfinderCourses1 } from './../actions/App/Http/Controllers/PublicController';
+    import { courses as wayfinderCourses1 } from './../actions/App/Http/Controllers/PublicController';
 
-import {Link} from '@inertiajs/vue3';import PublicLayout from '../Layouts/PublicLayout.vue';defineProps({content:Object});</script>
-<template><PublicLayout><main class="public-page"><section class="page-hero wrap"><div class="eyebrow">{{content.eyebrow}}</div><h1>{{content.title}}<br><em>{{content.emphasis}}</em></h1><p>{{content.intro}}</p></section><section class="wrap page-content steps-grid"><article v-for="step in content.steps" :key="step.number" class="step-card"><span>{{step.number}}</span><h2>{{step.title}}</h2><p>{{step.text}}</p></article></section><section class="wrap how-callout"><div><div class="eyebrow">SMALL GROUPS, REAL MOMENTUM</div><h2>{{content.callout_title}}</h2><p>{{content.callout_body}}</p></div><Link class="button button-dark" :href="wayfinderCourses1().url">Explore live courses <UiIcon name="arrow-up-right" class="ui-icon" :size="13" /></Link></section></main></PublicLayout></template>
+    import { Link } from '@inertiajs/vue3'; import PublicLayout from '../Layouts/PublicLayout.vue'; defineProps({ content: Object });</script>
+<template>
+    <PublicLayout>
+        <main class="public-page">
+            <section class="page-hero wrap">
+                <div class="eyebrow">{{ content.eyebrow }}</div>
+                <h1>{{ content.title }}<br><em>{{ content.emphasis }}</em></h1>
+                <p>{{ content.intro }}</p>
+            </section>
+            <section class="wrap page-content steps-grid">
+                <article v-for="step in content.steps" :key="step.number" class="step-card"><span>{{ step.number }}</span>
+                    <h2>{{ step.title }}</h2>
+                    <p>{{ step.text }}</p>
+                </article>
+            </section>
+            <section class="wrap how-callout">
+                <div>
+                    <div class="eyebrow text-berry-dark">SMALL GROUPS, REAL MOMENTUM</div>
+                    <h2>{{ content.callout_title }}</h2>
+                    <p>{{ content.callout_body }}</p>
+                </div>
+                <Link class="button button-dark" :href="wayfinderCourses1().url">Explore live courses
+                    <UiIcon name="arrow-up-right" class="ui-icon" :size="13" />
+                </Link>
+            </section>
+        </main>
+    </PublicLayout>
+</template>

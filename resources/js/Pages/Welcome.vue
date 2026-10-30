@@ -1,8 +1,37 @@
 <script setup>
-  import { courses as wayfinderCourses1, howItWorks as wayfinderHowItWorks2, course as wayfinderCourse3, stories as wayfinderStories4, mentors as wayfinderMentors5 } from './../actions/App/Http/Controllers/PublicController';
-  import { insights as wayfinderInsights6, insight as wayfinderInsight7, job as wayfinderJob8, jobs as wayfinderJobs9 } from './../actions/App/Http/Controllers/DiscoveryController';
-  import { reports as wayfinderReports12, report as wayfinderReport13, surveys as wayfinderSurveys14, survey as wayfinderSurvey15 } from './../actions/App/Http/Controllers/DiscoveryController';
-  import { index as wayfinderIndex10, show as wayfinderShow11 } from './../actions/App/Http/Controllers/WebinarEventController';
+import {
+    courses as wayfinderCourses1,
+    howItWorks as wayfinderHowItWorks2,
+    course as wayfinderCourse3,
+    stories as wayfinderStories4,
+    mentors as wayfinderMentors5,
+} from './../actions/App/Http/Controllers/PublicController';
+
+import {
+    index as wayfinderIndex10,
+    show as wayfinderShow11,
+} from './../actions/App/Http/Controllers/WebinarEventController';
+
+import {
+    index as wayfinderInsights6,
+    show as wayfinderInsight7,
+} from './../actions/App/Http/Controllers/Insights/InsightController';
+
+import {
+    index as wayfinderReports12,
+    show as wayfinderReport13,
+} from './../actions/App/Http/Controllers/Insights/ReportController';
+
+import {
+    index as wayfinderSurveys14,
+    show as wayfinderSurvey15,
+    submit as wayfinderSubmitSurvey16,
+} from './../actions/App/Http/Controllers/Insights/SurveyController';
+
+import {
+    index as wayfinderJobs9,
+    show as wayfinderJob8,
+} from './../actions/App/Http/Controllers/Careers/JobController';
 
   import { Link } from '@inertiajs/vue3';
   import PublicLayout from '../Layouts/PublicLayout.vue';
@@ -112,16 +141,16 @@
         <div class="wrap">
           <div class="home-v3-section-heading home-v3-learning-heading">
             <div>
-              <div class="eyebrow">A DIFFERENT KIND OF CLASSROOM</div>
-              <h2>Less watching.<br><em>More becoming.</em></h2>
+              <div class="eyebrow text-berry-light">A DIFFERENT KIND OF CLASSROOM</div>
+              <h2>Less watching.<br><em class="text-berry-light">More becoming.</em></h2>
             </div>
             <p>Videos can explain an idea. People help you work through it. Our programs make the live room the center
               of your learning, with lessons and replays there when you need them.</p>
           </div>
           <div class="home-v3-step-grid">
             <article v-for="step in learningSteps" :key="step.number" class="home-v3-step">
-              <div class="home-v3-step-top"><span>{{ step.number }}</span>
-                
+              <div class="home-v3-step-top text-berry-light"><span>{{ step.number }}</span>
+
               </div>
               <h3>{{ step.title }}</h3>
               <p>{{ step.text }}</p>
@@ -191,7 +220,7 @@
           <Link v-for="topic in insightTopics" :key="topic.category"
             :href="wayfinderInsights6.url({ query: { category: topic.category } })" class="home-v3-topic-link"><span>{{
               topic.category }}</span><small>{{ topic.stories_count }} {{ topic.stories_count === 1 ? 'story' :
-              'stories' }}</small>
+                'stories' }}</small>
             <UiIcon name="arrow-up-right" :size="13" />
           </Link>
         </nav>
@@ -203,7 +232,7 @@
                   :src="item.cover_image || '/images/learning/live-class.png'" :alt="item.title"><span>{{ item.type
                   }}</span></Link>
               <div class="home-v3-editorial-copy">
-                <div class="home-v3-editorial-meta"><span>{{ item.category || 'Kanram Journal' }}</span><span>{{
+                <div class="home-v3-editorial-meta"><span>{{ item.category || 'Alfrik Journal' }}</span><span>{{
                   item.reading_minutes }} min read</span></div>
                 <h3>
                   <Link :href="wayfinderInsight7.url({ slug: item.slug })">{{ item.title }}</Link>
@@ -226,11 +255,11 @@
           <aside class="home-v3-opportunities">
             <div class="home-v3-opportunities-heading"><span class="eyebrow">FROM THE COMMUNITY</span>
               <h3>Good work<br><em>finds its people.</em></h3>
-              <p>Explore roles and projects shared by the Kanram community.</p>
+              <p>Explore roles and projects shared by the Alfrik community.</p>
             </div>
             <Link v-for="job in opportunities" :key="job.id" :href="wayfinderJob8.url({ slug: job.slug })"
               class="home-v3-job-row"><span><small>{{ job.company }} · {{ job.location }}</small><b>{{ job.title
-                  }}</b><small>{{ job.workplace_type.replace('_', ' ') }} · {{ job.employment_type.replace('_', ' ')
+              }}</b><small>{{ job.workplace_type.replace('_', ' ') }} · {{ job.employment_type.replace('_', ' ')
                   }}</small></span>
               <UiIcon name="arrow-up-right" :size="14" />
             </Link>
@@ -284,7 +313,7 @@
               </template>
               <template v-else>
                 <h4>Evidence, context, and new ideas.</h4>
-                <p>Read research reports shared with the Kanram community across subjects and fields.</p>
+                <p>Read research reports shared with the Alfrik community across subjects and fields.</p>
                 <Link :href="wayfinderReports12().url">Explore reports
                   <UiIcon name="arrow-up-right" :size="13" />
                 </Link>
@@ -308,11 +337,12 @@
                 :alt="event.title"><span class="home-v3-event-content"><span class="home-v3-event-date"><b>{{ new
                   Date(event.starts_at).toLocaleDateString(undefined, {
                     timeZone: event.timezone, month: 'short', day:
-                    'numeric'
-                    }) }}</b><small>{{ new Date(event.starts_at).toLocaleTimeString(undefined, {
+                      'numeric'
+                  }) }}</b><small>{{ new Date(event.starts_at).toLocaleTimeString(undefined, {
                       timeZone:
                         event.timezone, hour:
-                        'numeric', minute: '2-digit', timeZoneName: 'short' }) }}</small></span><span
+                        'numeric', minute: '2-digit', timeZoneName: 'short'
+                    }) }}</small></span><span
                   class="home-v3-event-copy"><b>{{
                     event.title }}</b><small>{{ event.host_name }} · {{ event.duration_minutes }}
                     min</small></span></span>

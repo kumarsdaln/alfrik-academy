@@ -44,7 +44,7 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\NotificationController::read
- * @see app/Http/Controllers/NotificationController.php:51
+ * @see app/Http/Controllers/NotificationController.php:68
  * @route '/notifications/{notification}/read'
  */
 export const read = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -59,7 +59,7 @@ read.definition = {
 
 /**
 * @see \App\Http\Controllers\NotificationController::read
- * @see app/Http/Controllers/NotificationController.php:51
+ * @see app/Http/Controllers/NotificationController.php:68
  * @route '/notifications/{notification}/read'
  */
 read.url = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -87,7 +87,7 @@ read.url = (args: { notification: string | number } | [notification: string | nu
 
 /**
 * @see \App\Http\Controllers\NotificationController::read
- * @see app/Http/Controllers/NotificationController.php:51
+ * @see app/Http/Controllers/NotificationController.php:68
  * @route '/notifications/{notification}/read'
  */
 read.post = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -97,7 +97,7 @@ read.post = (args: { notification: string | number } | [notification: string | n
 
 /**
 * @see \App\Http\Controllers\NotificationController::readAll
- * @see app/Http/Controllers/NotificationController.php:58
+ * @see app/Http/Controllers/NotificationController.php:82
  * @route '/notifications/read-all'
  */
 export const readAll = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -112,7 +112,7 @@ readAll.definition = {
 
 /**
 * @see \App\Http\Controllers\NotificationController::readAll
- * @see app/Http/Controllers/NotificationController.php:58
+ * @see app/Http/Controllers/NotificationController.php:82
  * @route '/notifications/read-all'
  */
 readAll.url = (options?: RouteQueryOptions) => {
@@ -121,7 +121,7 @@ readAll.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\NotificationController::readAll
- * @see app/Http/Controllers/NotificationController.php:58
+ * @see app/Http/Controllers/NotificationController.php:82
  * @route '/notifications/read-all'
  */
 readAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -131,7 +131,7 @@ readAll.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\NotificationController::open
- * @see app/Http/Controllers/NotificationController.php:65
+ * @see app/Http/Controllers/NotificationController.php:93
  * @route '/notifications/{notification}/open'
  */
 export const open = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -146,7 +146,7 @@ open.definition = {
 
 /**
 * @see \App\Http\Controllers\NotificationController::open
- * @see app/Http/Controllers/NotificationController.php:65
+ * @see app/Http/Controllers/NotificationController.php:93
  * @route '/notifications/{notification}/open'
  */
 open.url = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -174,7 +174,7 @@ open.url = (args: { notification: string | number } | [notification: string | nu
 
 /**
 * @see \App\Http\Controllers\NotificationController::open
- * @see app/Http/Controllers/NotificationController.php:65
+ * @see app/Http/Controllers/NotificationController.php:93
  * @route '/notifications/{notification}/open'
  */
 open.post = (args: { notification: string | number } | [notification: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({

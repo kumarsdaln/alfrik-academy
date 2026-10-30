@@ -1,32 +1,39 @@
-/* Kanram Academy theme: calm forest identity, warm learning surfaces, clear status colors. */
+/* Alfrik Academy design tokens. Semantic state colors stay independent from the brand. */
 :root {
   color-scheme: light;
-  --academy-primary: #354532;
-  --academy-primary-hover: #293a2f;
-  --academy-primary-soft: #e8eee4;
-  --academy-sage: #52664f;
-  --academy-sage-light: #66755d;
-  --academy-sage-wash: #f4f6f1;
-  --academy-ink: #252922;
-  --academy-muted: #626a60;
-  --academy-paper: #faf9f6;
-  --academy-surface: #ffffff;
-  --academy-border: #e6e5dd;
-  --academy-border-strong: #c9d5c3;
-  --academy-accent: #876328;
-  --academy-focus: #52664f;
+  --academy-primary: #B00050;
+  --academy-primary-hover: #8F0041;
+  --academy-primary-soft: #F7E6EE;
+  --academy-secondary: #77304F;
+  --academy-secondary-light: #94546D;
+  --academy-brand-wash: #FBF3F6;
+  --academy-ink: #171B2E;
+  --academy-muted: #687080;
+  --academy-paper: #F8F6F2;
+  --academy-surface: #FFFFFF;
+  --academy-contrast: #FFFFFF;
+  --academy-border: #E7E2E5;
+  --academy-border-strong: #D8C3CE;
+  --academy-accent: #946F32;
+  --academy-focus: #B00050;
+  --academy-logo-fill: var(--academy-primary);
+  --academy-action: var(--academy-primary);
+  --academy-action-hover: var(--academy-primary-hover);
+  --academy-sage: var(--academy-secondary);
+  --academy-sage-light: var(--academy-secondary-light);
+  --academy-sage-wash: var(--academy-brand-wash);
+  --academy-white: #FFFFFF;
 
-  /* Semantic states stay distinct from the brand; never use color alone to convey status. */
   --academy-success: #426044;
-  --academy-success-surface: #edf4eb;
-  --academy-warning: #6e4c0d;
-  --academy-warning-surface: #f7f0df;
-  --academy-danger: #8a3934;
-  --academy-danger-surface: #fbefec;
-  --academy-info: #405b63;
-  --academy-info-surface: #edf3f4;
+  --academy-success-surface: #EDF4EB;
+  --academy-warning: #6E4C0D;
+  --academy-warning-surface: #F7F0DF;
+  --academy-danger: #8A3934;
+  --academy-danger-surface: #FBEFEC;
+  --academy-info: #405B63;
+  --academy-info-surface: #EDF3F4;
 
-  /* Legacy aliases retained so older pages inherit the same theme. */
+  /* Compatibility aliases: migrate consumers to academy semantic tokens, then remove these. */
   --ink: var(--academy-ink);
   --muted: var(--academy-muted);
   --cream: var(--academy-paper);
@@ -35,7 +42,7 @@
   --mint: var(--academy-primary-soft);
   --color-kanram-ink: var(--academy-ink);
   --color-kanram-primary: var(--academy-primary);
-  --color-kanram-sage: var(--academy-sage);
+  --color-kanram-sage: var(--academy-secondary);
   --color-kanram-accent: var(--academy-accent);
   --color-kanram-border: var(--academy-border);
   --color-kanram-muted: var(--academy-muted);
@@ -48,46 +55,200 @@
   --status-info: var(--academy-info);
 }
 
-body { color: var(--academy-ink); background-color: var(--academy-surface); }
-::selection { color: var(--academy-ink); background: var(--academy-primary-soft); }
-:focus-visible { outline: 2px solid var(--academy-focus); outline-offset: 3px; }
-
-.button-dark { background-color: var(--academy-primary); color: #fff; }
-.button-dark:hover { background-color: var(--academy-primary-hover); }
-.main-nav a:hover, .text-link:hover, .sign-in:hover { color: var(--academy-primary); }
-.side-link.selected { background: var(--academy-primary-soft); color: var(--academy-primary); }
-.panel-icon-button:hover { background: var(--academy-primary-soft); color: var(--academy-primary); border-color: var(--academy-border-strong); }
-.panel-notification-dot { background: var(--academy-primary); }
-.course-utility-button[aria-pressed="true"] { color: var(--academy-primary); }
-
-/* Keep student and staff controls within the academy palette. */
-.icon-violet, .lilac-symbol, .quiz-row-icon, .assignment-list-icon,
-.staff-review-document, .activity-symbol.lilac-symbol {
-  color: var(--academy-primary);
-  background-color: var(--academy-primary-soft);
+:root.theme-dark,
+html.theme-dark {
+  color-scheme: dark;
+  --academy-primary: #F08BB2;
+  --academy-primary-hover: #F7B3CC;
+  --academy-primary-soft: #482535;
+  --academy-secondary: #E7A0BA;
+  --academy-secondary-light: #F0BED0;
+  --academy-brand-wash: #30232A;
+  --academy-ink: #F2EDF0;
+  --academy-muted: #C0B8BF;
+  --academy-paper: #19171A;
+  --academy-surface: #211F22;
+  --academy-border: #40373D;
+  --academy-border-strong: #684554;
+  --academy-accent: #D6B877;
+  --academy-focus: #F7B3CC;
+  --academy-logo-fill: #77304F;
+  --academy-action: #77304F;
+  --academy-action-hover: #8F0041;
+  --academy-success: #A9D0A5;
+  --academy-success-surface: #26362A;
+  --academy-warning: #E3C67C;
+  --academy-warning-surface: #3A3020;
+  --academy-danger: #E6A19A;
+  --academy-danger-surface: #3A2625;
+  --academy-info: #A7C9D0;
+  --academy-info-surface: #253438;
 }
-.bar-violet, .bar-blue { background-color: var(--academy-sage); }
-.icon-blue, .blue-symbol { color: var(--academy-info); background-color: var(--academy-info-surface); }
-.mint-symbol { color: var(--academy-success); background-color: var(--academy-success-surface); }
-.peach-symbol { color: var(--academy-accent); background-color: var(--academy-warning-surface); }
-.assignment-list-feedback, .quiz-locked { color: var(--academy-primary); background-color: var(--academy-sage-wash); }
-.quiz-option:hover, .quiz-option-selected { border-color: var(--academy-sage); background-color: var(--academy-sage-wash); }
-.learner-pulse > a:hover { background-color: var(--academy-sage-wash); }
+
+body {
+  color: var(--academy-ink);
+  background-color: var(--academy-surface);
+}
+.text-berry-light {
+    color: #E8C8D6 !important;
+}
+.text-berry-dark {
+    color: #B00050 !important;
+}
+::selection {
+  color: var(--academy-ink);
+  background: var(--academy-primary-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--academy-focus);
+  outline-offset: 3px;
+}
+
+.button-dark {
+  background-color: var(--academy-action);
+  color: #fff;
+}
+
+.button-dark:hover {
+  background-color: var(--academy-action-hover);
+}
+
+.main-nav a:hover,
+.text-link:hover,
+.sign-in:hover {
+  color: var(--academy-primary);
+}
+
+.side-link.selected {
+  background: var(--academy-primary-soft);
+  color: var(--academy-primary);
+}
+
+.panel-icon-button:hover {
+  background: var(--academy-primary-soft);
+  color: var(--academy-primary);
+  border-color: var(--academy-border-strong);
+}
+
+.panel-notification-dot {
+  background: var(--academy-primary);
+}
+
+.course-utility-button[aria-pressed="true"] {
+  color: var(--academy-primary);
+}
+
+.icon-violet,
+.lilac-symbol,
+.quiz-row-icon,
+.assignment-list-icon,
+.staff-review-document,
+.activity-symbol.lilac-symbol {
+  color: var(--academy-primary);
+  background-color: var(--academy-primary);
+}
+
+.bar-violet,
+.bar-blue {
+  background-color: var(--academy-secondary);
+}
+
+.icon-blue,
+.blue-symbol {
+  color: var(--academy-info);
+  background-color: var(--academy-info-surface);
+}
+
+.mint-symbol {
+  color: var(--academy-success);
+  background-color: var(--academy-success-surface);
+}
+
+.peach-symbol {
+  color: var(--academy-accent);
+  background-color: var(--academy-warning-surface);
+}
+
+.assignment-list-feedback,
+.quiz-locked {
+  color: var(--academy-secondary);
+  background-color: var(--academy-ink);
+}
+
+.quiz-option:hover,
+.quiz-option-selected {
+  border-color: var(--academy-secondary);
+  background-color: var(--academy-ink);
+}
+
 .home-v3 {
   --home-ink: var(--academy-ink);
   --home-muted: var(--academy-muted);
   --home-forest: var(--academy-primary);
-  --home-leaf: var(--academy-sage-light);
+  --home-leaf: var(--academy-secondary-light);
   --home-line: var(--academy-border);
   --home-paper: var(--academy-paper);
 }
 
-/* Shared semantic tokens for feedback, badges, and validation states. */
-.status-success, .text-success { color: var(--academy-success); }
-.status-success-surface { color: var(--academy-success); background-color: var(--academy-success-surface); }
-.status-warning, .text-warning { color: var(--academy-warning); }
-.status-warning-surface { color: var(--academy-warning); background-color: var(--academy-warning-surface); }
-.status-danger, .text-danger, .quiz-error { color: var(--academy-danger); }
-.status-danger-surface { color: var(--academy-danger); background-color: var(--academy-danger-surface); }
-.status-info, .text-info { color: var(--academy-info); }
-.status-info-surface { color: var(--academy-info); background-color: var(--academy-info-surface); }
+.status-success,
+.text-success {
+  color: var(--academy-success);
+}
+
+.status-success-surface {
+  color: var(--academy-success);
+  background-color: var(--academy-success-surface);
+}
+
+.status-warning,
+.text-warning {
+  color: var(--academy-warning);
+}
+
+.status-warning-surface {
+  color: var(--academy-warning);
+  background-color: var(--academy-warning-surface);
+}
+
+.status-danger,
+.text-danger,
+.quiz-error {
+  color: var(--academy-danger);
+}
+
+.status-danger-surface {
+  color: var(--academy-danger);
+  background-color: var(--academy-danger-surface);
+}
+
+.status-info,
+.text-info {
+  color: var(--academy-info);
+}
+
+.status-info-surface {
+  color: var(--academy-info);
+  background-color: var(--academy-info-surface);
+}
+
+/* Dark learning surfaces use the same berry identity with accessible contrast. */
+html.theme-dark .dashboard-shell .side-link.selected {
+  background: var(--academy-primary-soft);
+  color: var(--academy-secondary-light);
+}
+
+html.theme-dark .dashboard-shell .assignment-card {
+  background: var(--academy-primary-soft);
+  color: var(--academy-ink);
+}
+
+html.theme-dark .dashboard-shell .assignment-card p {
+  color: var(--academy-muted);
+}
+
+html.theme-dark .dashboard-shell .panel-icon-button:hover {
+  background: var(--academy-primary-soft);
+  color: var(--academy-secondary-light);
+  border-color: var(--academy-border-strong);
+}

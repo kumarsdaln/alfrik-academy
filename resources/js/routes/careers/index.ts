@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:163
+* @see \App\Http\Controllers\Careers\JobController::index
+ * @see app/Http/Controllers/Careers/JobController.php:14
  * @route '/careers'
  */
 export const index = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -15,8 +15,8 @@ index.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:163
+* @see \App\Http\Controllers\Careers\JobController::index
+ * @see app/Http/Controllers/Careers/JobController.php:14
  * @route '/careers'
  */
 index.url = (options?: RouteQueryOptions) => {
@@ -24,8 +24,8 @@ index.url = (options?: RouteQueryOptions) => {
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:163
+* @see \App\Http\Controllers\Careers\JobController::index
+ * @see app/Http/Controllers/Careers/JobController.php:14
  * @route '/careers'
  */
 index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -33,8 +33,8 @@ index.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::index
- * @see app/Http/Controllers/DiscoveryController.php:163
+* @see \App\Http\Controllers\Careers\JobController::index
+ * @see app/Http/Controllers/Careers/JobController.php:14
  * @route '/careers'
  */
 index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -43,42 +43,8 @@ index.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 })
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::submit
- * @see app/Http/Controllers/DiscoveryController.php:182
- * @route '/careers'
- */
-export const submit = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
-    url: submit.url(options),
-    method: 'post',
-})
-
-submit.definition = {
-    methods: ["post"],
-    url: '/careers',
-} satisfies RouteDefinition<["post"]>
-
-/**
-* @see \App\Http\Controllers\DiscoveryController::submit
- * @see app/Http/Controllers/DiscoveryController.php:182
- * @route '/careers'
- */
-submit.url = (options?: RouteQueryOptions) => {
-    return submit.definition.url + queryParams(options)
-}
-
-/**
-* @see \App\Http\Controllers\DiscoveryController::submit
- * @see app/Http/Controllers/DiscoveryController.php:182
- * @route '/careers'
- */
-submit.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
-    url: submit.url(options),
-    method: 'post',
-})
-
-/**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:218
+* @see \App\Http\Controllers\Careers\JobController::show
+ * @see app/Http/Controllers/Careers/JobController.php:59
  * @route '/careers/{slug}'
  */
 export const show = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -92,8 +58,8 @@ show.definition = {
 } satisfies RouteDefinition<["get","head"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:218
+* @see \App\Http\Controllers\Careers\JobController::show
+ * @see app/Http/Controllers/Careers/JobController.php:59
  * @route '/careers/{slug}'
  */
 show.url = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -120,8 +86,8 @@ show.url = (args: { slug: string | number } | [slug: string | number ] | string 
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:218
+* @see \App\Http\Controllers\Careers\JobController::show
+ * @see app/Http/Controllers/Careers/JobController.php:59
  * @route '/careers/{slug}'
  */
 show.get = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -129,8 +95,8 @@ show.get = (args: { slug: string | number } | [slug: string | number ] | string 
     method: 'get',
 })
 /**
-* @see \App\Http\Controllers\DiscoveryController::show
- * @see app/Http/Controllers/DiscoveryController.php:218
+* @see \App\Http\Controllers\Careers\JobController::show
+ * @see app/Http/Controllers/Careers/JobController.php:59
  * @route '/careers/{slug}'
  */
 show.head = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -139,8 +105,42 @@ show.head = (args: { slug: string | number } | [slug: string | number ] | string
 })
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::apply
- * @see app/Http/Controllers/DiscoveryController.php:226
+* @see \App\Http\Controllers\Careers\JobSubmissionController::submit
+ * @see app/Http/Controllers/Careers/JobSubmissionController.php:14
+ * @route '/careers/submit'
+ */
+export const submit = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+    url: submit.url(options),
+    method: 'post',
+})
+
+submit.definition = {
+    methods: ["post"],
+    url: '/careers/submit',
+} satisfies RouteDefinition<["post"]>
+
+/**
+* @see \App\Http\Controllers\Careers\JobSubmissionController::submit
+ * @see app/Http/Controllers/Careers/JobSubmissionController.php:14
+ * @route '/careers/submit'
+ */
+submit.url = (options?: RouteQueryOptions) => {
+    return submit.definition.url + queryParams(options)
+}
+
+/**
+* @see \App\Http\Controllers\Careers\JobSubmissionController::submit
+ * @see app/Http/Controllers/Careers/JobSubmissionController.php:14
+ * @route '/careers/submit'
+ */
+submit.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
+    url: submit.url(options),
+    method: 'post',
+})
+
+/**
+* @see \App\Http\Controllers\Careers\JobApplicationController::apply
+ * @see app/Http/Controllers/Careers/JobApplicationController.php:13
  * @route '/careers/{slug}/apply'
  */
 export const apply = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -154,8 +154,8 @@ apply.definition = {
 } satisfies RouteDefinition<["post"]>
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::apply
- * @see app/Http/Controllers/DiscoveryController.php:226
+* @see \App\Http\Controllers\Careers\JobApplicationController::apply
+ * @see app/Http/Controllers/Careers/JobApplicationController.php:13
  * @route '/careers/{slug}/apply'
  */
 apply.url = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -182,8 +182,8 @@ apply.url = (args: { slug: string | number } | [slug: string | number ] | string
 }
 
 /**
-* @see \App\Http\Controllers\DiscoveryController::apply
- * @see app/Http/Controllers/DiscoveryController.php:226
+* @see \App\Http\Controllers\Careers\JobApplicationController::apply
+ * @see app/Http/Controllers/Careers/JobApplicationController.php:13
  * @route '/careers/{slug}/apply'
  */
 apply.post = (args: { slug: string | number } | [slug: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -192,8 +192,8 @@ apply.post = (args: { slug: string | number } | [slug: string | number ] | strin
 })
 const careers = {
     index: Object.assign(index, index),
-submit: Object.assign(submit, submit),
 show: Object.assign(show, show),
+submit: Object.assign(submit, submit),
 apply: Object.assign(apply, apply),
 }
 

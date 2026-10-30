@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition, applyUrlDefaults } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\AuthController::request
- * @see app/Http/Controllers/AuthController.php:36
+ * @see app/Http/Controllers/AuthController.php:39
  * @route '/forgot-password'
  */
 export const request = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ request.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::request
- * @see app/Http/Controllers/AuthController.php:36
+ * @see app/Http/Controllers/AuthController.php:39
  * @route '/forgot-password'
  */
 request.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ request.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::request
- * @see app/Http/Controllers/AuthController.php:36
+ * @see app/Http/Controllers/AuthController.php:39
  * @route '/forgot-password'
  */
 request.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ request.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\AuthController::request
- * @see app/Http/Controllers/AuthController.php:36
+ * @see app/Http/Controllers/AuthController.php:39
  * @route '/forgot-password'
  */
 request.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -44,7 +44,7 @@ request.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\AuthController::email
- * @see app/Http/Controllers/AuthController.php:41
+ * @see app/Http/Controllers/AuthController.php:44
  * @route '/forgot-password'
  */
 export const email = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -59,7 +59,7 @@ email.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::email
- * @see app/Http/Controllers/AuthController.php:41
+ * @see app/Http/Controllers/AuthController.php:44
  * @route '/forgot-password'
  */
 email.url = (options?: RouteQueryOptions) => {
@@ -68,7 +68,7 @@ email.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::email
- * @see app/Http/Controllers/AuthController.php:41
+ * @see app/Http/Controllers/AuthController.php:44
  * @route '/forgot-password'
  */
 email.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -78,7 +78,7 @@ email.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\AuthController::reset
- * @see app/Http/Controllers/AuthController.php:49
+ * @see app/Http/Controllers/AuthController.php:63
  * @route '/reset-password/{token}'
  */
 export const reset = (args: { token: string | number } | [token: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -93,7 +93,7 @@ reset.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::reset
- * @see app/Http/Controllers/AuthController.php:49
+ * @see app/Http/Controllers/AuthController.php:63
  * @route '/reset-password/{token}'
  */
 reset.url = (args: { token: string | number } | [token: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -121,7 +121,7 @@ reset.url = (args: { token: string | number } | [token: string | number ] | stri
 
 /**
 * @see \App\Http\Controllers\AuthController::reset
- * @see app/Http/Controllers/AuthController.php:49
+ * @see app/Http/Controllers/AuthController.php:63
  * @route '/reset-password/{token}'
  */
 reset.get = (args: { token: string | number } | [token: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -130,7 +130,7 @@ reset.get = (args: { token: string | number } | [token: string | number ] | stri
 })
 /**
 * @see \App\Http\Controllers\AuthController::reset
- * @see app/Http/Controllers/AuthController.php:49
+ * @see app/Http/Controllers/AuthController.php:63
  * @route '/reset-password/{token}'
  */
 reset.head = (args: { token: string | number } | [token: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -140,7 +140,7 @@ reset.head = (args: { token: string | number } | [token: string | number ] | str
 
 /**
 * @see \App\Http\Controllers\AuthController::update
- * @see app/Http/Controllers/AuthController.php:57
+ * @see app/Http/Controllers/AuthController.php:71
  * @route '/reset-password'
  */
 export const update = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -155,7 +155,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\AuthController::update
- * @see app/Http/Controllers/AuthController.php:57
+ * @see app/Http/Controllers/AuthController.php:71
  * @route '/reset-password'
  */
 update.url = (options?: RouteQueryOptions) => {
@@ -164,7 +164,7 @@ update.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\AuthController::update
- * @see app/Http/Controllers/AuthController.php:57
+ * @see app/Http/Controllers/AuthController.php:71
  * @route '/reset-password'
  */
 update.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({

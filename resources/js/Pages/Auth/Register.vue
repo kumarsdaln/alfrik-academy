@@ -10,10 +10,10 @@ const submit = () => form.post(registerAction().url);
 </script>
 
 <template>
-  <Head title="Create your account — Kanram Academy" />
+  <Head title="Create your account — Alfrik Academy" />
   <main class="auth-shell auth-v2 auth-register">
     <section class="auth-panel">
-      <Link :href="wayfinderHome1().url" class="brand auth-brand"><BrandMark class="brand-mark" /><span>Kanram Academy</span></Link>
+      <Link :href="wayfinderHome1().url" class="brand auth-brand"><BrandMark class="brand-mark" /><span>Alfrik Academy</span></Link>
       <div class="auth-copy"><div class="eyebrow">COME LEARN WITH US</div><h1>Make room<br>for <em>what’s next.</em></h1><p>One account brings your live classes, mentors, and learning progress together.</p></div>
       <form class="auth-form" @submit.prevent="submit">
         <label for="register-name">Your name<input id="register-name" v-model="form.name" autocomplete="name" required placeholder="Alex Morgan" :aria-invalid="!!form.errors.name"><small v-if="form.errors.name" role="alert">{{ form.errors.name }}</small></label>
@@ -23,11 +23,11 @@ const submit = () => form.post(registerAction().url);
         <button class="button button-dark auth-submit" :disabled="form.processing">{{ form.processing ? 'Creating account…' : 'Create your learner account' }} <UiIcon name="arrow-up-right" class="ui-icon" :size="15" /></button>
         <p class="auth-switch">Already have an account? <Link :href="wayfinderShowLogin2().url">Log in</Link></p>
       </form>
-      <p class="auth-privacy">By creating an account, you agree to use Kanram Academy respectfully.</p>
+      <p class="auth-privacy">By creating an account, you agree to use Alfrik Academy respectfully.</p>
     </section>
-    <aside class="auth-aside auth-photo-panel" aria-label="Learn together at Kanram Academy">
+    <aside class="auth-aside auth-photo-panel" aria-label="Learn together at Alfrik Academy">
       <img class="auth-aside-image" :src="'/images/learning/live-class.png'" alt="Learners collaborating in a live class" />
-      <div class="auth-aside-content"><span>GOOD THINGS HAPPEN LIVE</span><blockquote>“I came for the skills. I stayed for the people who challenged and cheered me on.”</blockquote><div class="auth-aside-foot"><small>Kanram Academy</small><small>Learning, together</small></div></div>
+      <div class="auth-aside-content"><span>GOOD THINGS HAPPEN LIVE</span><blockquote>“I came for the skills. I stayed for the people who challenged and cheered me on.”</blockquote><div class="auth-aside-foot"><small>Alfrik Academy</small><small>Learning, together</small></div></div>
     </aside>
   </main>
 </template>

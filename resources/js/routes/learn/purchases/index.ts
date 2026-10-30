@@ -1,7 +1,7 @@
 import { queryParams, type RouteQueryOptions, type RouteDefinition } from './../../../wayfinder'
 /**
 * @see \App\Http\Controllers\StudentBillingController::returnMethod
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 export const returnMethod = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -16,7 +16,7 @@ returnMethod.definition = {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::returnMethod
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 returnMethod.url = (options?: RouteQueryOptions) => {
@@ -25,7 +25,7 @@ returnMethod.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\StudentBillingController::returnMethod
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 returnMethod.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -34,7 +34,7 @@ returnMethod.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 })
 /**
 * @see \App\Http\Controllers\StudentBillingController::returnMethod
- * @see app/Http/Controllers/StudentBillingController.php:267
+ * @see app/Http/Controllers/StudentBillingController.php:606
  * @route '/learn/purchases/return'
  */
 returnMethod.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
